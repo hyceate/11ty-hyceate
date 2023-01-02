@@ -1,0 +1,12 @@
+---
+layout: base
+eleventyComputed:
+    title: "{{ front_page.title }}"
+    description: "{{ front_page.description }}"
+---
+{% block content %}
+  <article>
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+  </article>
+{% endblock %}

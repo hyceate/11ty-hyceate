@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta description="Hyceate is a Freelance Illustrator and Cubism Live2d Rigger"/>
-    <title>Hyceate</title>
+    <meta description="{{description}}"/>
+    <title>{{ title }}</title>
 
     <style>
       .aspect-ratio {
@@ -24,15 +24,9 @@
       }</style>
   </head>
   <body>
-    
-  <article>
-    <h1>Hyceate</h1>
-    This is pretty _rad_, right?
-  </article>
-
+    {{ content | safe }}
   </body>
-  <footer>
-    <p>&copy; 2023 Hyceate</p>
-</footer>
-  
+  {%renderTemplate "webc"%}
+  <site-footer></site-footer>
+  {%endrenderTemplate%}
 </html>

@@ -1,0 +1,13 @@
+items:
+  - text: Home
+    url: /
+    tag: page
+  - text: Menu Two
+    url: "#"
+    tag: page
+  - text: Menu Three
+    url: "#"
+    tag: page
+  - text: Blog
+    url: /blog
+    tag: page

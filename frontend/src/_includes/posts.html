@@ -1,0 +1,10 @@
+---
+layout: base
+---
+{% block content %}
+<h1>{{ vtubername }}</h1>
+  <article>
+    {{ content | safe }}
+  </article>
+<p>{{ description }}</p>
+{% endblock %}
