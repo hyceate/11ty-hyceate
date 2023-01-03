@@ -9,11 +9,11 @@ public_folder: "/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 collections:
   - label: "Posts"
     name: "Posts"
-    folder: "src/posts"
+    folder: "src/posts/"
     create: true
     editor:
       preview: true
@@ -23,6 +23,7 @@ collections:
       - { label: "Vtuber", name: "vtubername", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "posts" }
       - widget: select
         label: "tags"
         name: "tags"
@@ -30,18 +31,18 @@ collections:
         create: true
         options: ["tier1", "tier2", "reels"]
 
-  - label: "Pages"
-    name: "Pages"
-    description: "Change Certain Page Data"
+  - label: "Front Page Settings"
+    name: "Front Page Settings"
+    description: "Change Front Page Data"
     editor:
       preview: true
     files:
       - label: "Front Page"
-        name: "subpages"
+        name: "frontpage"
         file: "src/_data/front_page.yaml"
         fields:
-          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-          - {label: "Tag", name: "tag", widget: "hidden", default: "page"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base"}
+          - { label: "Tag", name: "tag", widget: "hidden", default: "page"}
           - { label: "Title", name: "title", widget: string }
           - { label: "Description", name: "description", widget: string }
 

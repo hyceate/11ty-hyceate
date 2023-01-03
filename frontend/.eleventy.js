@@ -2,9 +2,12 @@ const yaml = require("js-yaml");
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
+const htmlmin = require("html-minifier");
+
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("admin");
+	eleventyConfig.addPassthroughCopy("src/static");
 	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(pluginWebc, {
@@ -16,6 +19,19 @@ module.exports = function(eleventyConfig) {
 		// Additional global data used in the Eleventy WebC transform
 		transformData: {},
 	});
+	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
+		if (outputPath.endsWith(".html")) {
+		  let minified = htmlmin.minify(content, {
+			useShortDoctype: true,
+			removeComments: true,
+			collapseWhitespace: false,
+		  });
+		  return minified;
+		}
+	
+		return content;
+	  });
 	eleventyConfig.addNunjucksShortcode("youtube", function (youtubeId, aspectRatio) {
 		return `<div class="aspect-ratio" style="--aspect-ratio: ${aspectRatio}"><iframe class="youtube-player video video--youtube" src="https://www.youtube.com/embed/${youtubeId}/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
 	  });

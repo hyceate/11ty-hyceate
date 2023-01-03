@@ -8,6 +8,6 @@ items:
   - text: Menu Three
     url: "#"
     tag: page
-  - text: Blog
-    url: /blog
+  - text: Gallery
+    url: /posts
     tag: page
