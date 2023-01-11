@@ -19,7 +19,7 @@
     margin: auto;
     position:relative;
     display:flex;
-    flex: 10 1 500px;
+    flex: 10 1 400px;
     overflow:scroll;
 }
 .post-right{
