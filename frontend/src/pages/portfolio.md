@@ -5,6 +5,7 @@ description: Hyceate's Portfolio Gallery
 layout: gallery
 eleventyNavigation:
   key: Portfolio
+  Order: 1
   body: Portfolio Gallery
 ---
 ## Projects Showcase
