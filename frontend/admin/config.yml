@@ -3,7 +3,7 @@ backend:
   repo: hyceate/live2dportfolio
   branch: main # Branch to update (optional; defaults to master)
   base_url: https://hyceate.netlify.app/
-  auth_endpoint: /api/auth
+  # auth_endpoint: /api/auth
   display_url: https://hyceate.netlify.app/
 media_folder: "assets/img"
 public_folder: "/img"
