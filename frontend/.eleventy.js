@@ -52,7 +52,7 @@ module.exports = function(eleventyConfig) {
 	  });
 	//Passthroughs
 	eleventyConfig.addPassthroughCopy("src/static");
-	eleventyConfig.addPassthroughCopy("src/admin");
+	eleventyConfig.addPassthroughCopy("admin");
 	// Let Eleventy transform HTML files 
 	// So that we can use .html
 	return {
