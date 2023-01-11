@@ -5,6 +5,7 @@ description: Chibified Lemon
 vtubername: Hyceate
 rigger: Hyceate
 artist: Hyceate
+artisttwitter: hyceate
 date: 2023-01-11T06:56:13.831Z
 layout: post
 tags:
