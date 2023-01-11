@@ -1,6 +1,6 @@
 ---
 title: Terms
-date: 2023-01-10T03:29:58.002Z
+date: 2023-01-11T02:26:12.193Z
 description: Terms and Conditions
 layout: page
 eleventyNavigation:
