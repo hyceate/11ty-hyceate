@@ -6,7 +6,7 @@ layout: page
 eleventyNavigation:
   key: Terms
   body: Terms and Conditions
-  Order: 3
+  Order: 2
 ---
 By reading this document, you agree to the following:
 terms and conditions outlined on this page,
