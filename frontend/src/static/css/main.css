@@ -21,7 +21,7 @@ a:visited{
   position:sticky;
   top:0;
   display:flex;
-  justify-content: center;
+  justify-content: stretch;
   z-index:2;
   background-color:var(--background-color);
   border-bottom:#6b6b6b 1px solid;
