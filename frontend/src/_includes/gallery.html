@@ -1,0 +1,23 @@
+---
+layout: page
+eleventyComputed:
+  title: "{{title}}"
+  description: "{{ description }}"
+---
+{% metagen metadata %}
+{% block content %}
+{{content | safe}}
+<ul class="gallerylist">
+{%- for post in collections.posts -%}
+  <li><a class="modal-link" href="{{ post.url }}"><img class="post-thumbnails" src="{{post.url}}{{post.data.thumbnail | url}}" style="aspect-ratio:1/1;background-color:aliceblue;"/>{# {{ post.data.title }} #}</a></li>
+{%- endfor -%}
+</ul>
+{% endblock %}
+ <!-- The Modal -->
+ <div id="myModal" class="modal hide-modal"> 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <section class="modal-button"><button class="closeButton">&times;</button></section>
+    <section class="inserted"></section>
+  </div>
+</div> 

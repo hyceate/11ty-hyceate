@@ -1,12 +1,20 @@
 ---
 layout: base
 eleventyComputed:
-    title: "{{ homepage.title }}"
-    description: "{{ homepage.description }}"
+  title: "{{ title | safe }}"
+  description: "{{ description | safe }}"
+eleventyNavigation:
+  key: "Home"
 ---
+{% metagen metadata %}
 {% block content %}
-  <article>
+  <section class="landing">
+  <aside>
     <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </article>
+  </aside>
+  <aside>
+  <h1>{{description}}</h1>
+</aside>
+  </section>
+  <article class="home-content">{{ content | safe }}</article>
 {% endblock %}

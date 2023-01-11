@@ -1,0 +1,37 @@
+.post-thumbnails{
+    aspect-ratio: 1/1;
+    max-width:100px;
+  }
+.inserted{
+    min-height:90%;
+    overflow:auto;
+    display:flex;
+}
+#post-content{
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin: 0px auto;
+    flex-wrap: wrap;
+    overflow:scroll;
+}
+.post-left{
+    margin: auto;
+    position:relative;
+    display:flex;
+    flex: 10 1 500px;
+    overflow:scroll;
+}
+.post-right{
+    flex: 1 5 400px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    overflow:scroll;
+}
+.post-right h1{
+    font-size:2rem;
+    letter-spacing: .2rem;
+}
+.post-right p{
+    
+}

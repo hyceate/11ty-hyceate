@@ -1,0 +1,16 @@
+---
+layout: base
+eleventyComputed:
+  title: "{{title | safe}}"
+  description: "{{ description | safe}}"
+  slug: "{{slug}}"
+eleventyNavigation:
+  key: "{{title}}"
+---
+{% metagen metadata %}
+{% block content %}
+<section class="">
+    <h1>{{ title | safe }}</h1>
+    {{ content | safe }}
+</section>
+{% endblock %}

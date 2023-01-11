@@ -1,34 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta description="Hyceate is a Freelance Illustrator and Cubism Live2d Rigger">
+    <meta description="Hi, this is Hyceate">
+    <meta name="keywords" content="hyceate,youtuber,live2d,artist,rigger,2d,animation,commissions,freelancer,illustrator,hire,commission,anime,japan">
     <title>Hyceate</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-  </head>
-  <main>
-    <header><ul class="navbar">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Hyceate</title>
+	<meta name="title" content="Hyceate">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://hyceate.pages.dev/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:title" content="Hyceate">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://hyceate.pages.dev/">
+	<meta name="twitter:title" content="Hyceate">
+	<link rel="canonical" href="https://hyceate.pages.dev/">
+    <link rel="stylesheet" href="/static/css/main.css"><link rel="stylesheet" href="/static/css/grid.css"><link rel="stylesheet" href="/static/css/modal.css"><link rel="stylesheet" href="/static/css/post.css">
 
-<li><a href="/">Home</a></li>
-
-<li><a href="#">Menu Two</a></li>
-
-<li><a href="#">Menu Three</a></li>
-
-<li><a href="/posts">Gallery</a></li>
-
-</ul></header>
     
-  <article>
-    <h1>Hyceate</h1>
-    This is pretty _rad_, right?
-  </article>
+    </head>
+  <body class="col-12">
+    <header class="header col-12"><nav>
+    
+    <ul class="navbar">
+      <li><a href="/" data-current="current item">Home</a> </li>
+      <li><a href="/pages/portfolio/">Portfolio</a> </li>
+      <li><a href="/pages/terms/">Terms</a> </li>
+    </ul>
+  </nav></header>
+    
 
-  </main>
-  <footer>
+  <section class="landing">
+  <aside>
+    <h1>Hyceate</h1>
+  </aside>
+  <aside>
+  <h1>Hi, this is Hyceate</h1>
+</aside>
+  </section>
+  <article class="home-content"></article>
+
+  </body>
+  <footer class="col-12">
     <p>&copy; 2023 Hyceate</p>
 </footer>
   
+  
+<script>var modal=document.getElementById("myModal"),modalLinks=document.getElementsByClassName("modal-link"),closeButton=document.querySelector(".closeButton");function hideModal(){modal.classList.remove("show-modal"),modal.classList.add("hide-modal");var e=modal.querySelector(".inserted");modal.addEventListener("transitionend",function(){modal.style.display="none",e.innerHTML=""})}for(var i=0;i<modalLinks.length;i++)modalLinks[i].onclick=function(e){e.preventDefault();var e=this.href,o=modal.querySelector(".inserted");o.innerHTML="",fetch(e).then(e=>e.text()).then(e=>{e=(new DOMParser).parseFromString(e,"text/html").getElementById("toBe");o.insertAdjacentHTML("beforeend",e.innerHTML),modal.style.display="flex",modal.classList.remove("hide-modal"),modal.classList.add("show-modal")}).catch(e=>console.log(e))};closeButton.onclick=hideModal,window.onclick=function(e){e.target===modal&&hideModal()},window.onpopstate=function(e){e.state&&e.state.modalOpen&&hideModal()};</script>
 </html>

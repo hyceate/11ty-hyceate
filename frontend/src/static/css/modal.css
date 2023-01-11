@@ -1,0 +1,57 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: - var(--header-height); /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  min-height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(104, 81, 81, 0.158);
+}
+.modal.hide-modal {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.modal.show-modal {
+  opacity: 1;
+  transition: all 0.3s ease-in;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  margin: 0px auto;
+  flex-wrap: wrap;
+}
+/* Modal Content */
+.modal-content {
+  background-color:var(--background-color);
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  border:rgba(104, 81, 81, 0.349) 1px solid;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1rem 2rem;
+  margin: 0px auto;
+  border-radius: 15px;
+}
+.modal-button{
+  top:12px;
+  right:12px;
+  width: 100%;
+  height: 40px;
+}
+/* The Close Button */
+.closeButton {
+  float:right;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeButton:hover,
+.closeButton:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

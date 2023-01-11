@@ -1,3 +1,10 @@
+---
+eleventyComputed:
+  url: "https://hyceate.pages.dev"
+  summary: "{{page.description}}"
+  name: "{{page.title}}"
+  keywords: "{{settings.keywords}}"
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,14 +12,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta description="{{description}}"/>
+    <meta name="keywords" content="{{keywords}}"/>
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-  </head>
-  <main>
+    {% metagen
+      title=title or metadata.title,
+      desc=desc or metadata.desc,
+      url=url + page.url
+  %}
+    <link rel="stylesheet" href="/static/css/main.css"><link rel="stylesheet" href="/static/css/grid.css"><link rel="stylesheet" href="/static/css/modal.css"><link rel="stylesheet" href="/static/css/post.css">
+{#     {% set css %}
+    {% include "src/static/css/main.css" %}
+    {% include "src/static/css/grid.css" %}
+    {% endset %}
+    <style>{{ css | cssmin | safe }}</style> #}
+    
+    </head>
+  <body class="col-12">
     {% include "src/_includes/_partials/header.html" %}
     {{ content | safe }}
-  </main>
+  </body>
   {%renderTemplate "webc"%}
   <site-footer></site-footer>
   {%endrenderTemplate%}
+  {% set js %}
+{% include "src/static/js/modal.js" %}
+{% endset %}
+<script>{{ js | jsmin | safe }}</script>
 </html>

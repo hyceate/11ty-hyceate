@@ -9,39 +9,47 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script  src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  <script> 
-  CMS.registerEditorComponent({
-  id: "youtube",
-  label: "Youtube",
-  pattern: /^{\% youtube \"(\S+)\", \"(\S+)\" \%}$/,
-  fields: [
-    {name: 'id', label: 'Youtube Video ID', widget: 'string'},
-    {name: 'aspect_ratio', label: 'Aspect ratio', widget: 'select', multiple: false, options: [ "16/9", "4/3", "1/1" ], default: "16/9"}
-  ],
-  fromBlock: function(match) {
-  const url = match[1];
-  let id;
-  if (url.startsWith("https://youtu.be/")) {
-    // Split the URL using the '/' character as the delimiter
-    id = url.split('/').pop().split('?')[0];
-  } else if (url.startsWith("https://www.youtube.com/watch?v=")) {
-    // Use a regular expression to extract the ID from the URL
-    id = url.match(/v=(\w+)/)[1];
-  }
-  return {
-    id: id,
-    aspect_ratio: match[2]
-  };
-},
-  toBlock: function(obj) {
-    return `{% youtube "${obj.id}", "${obj.aspect_ratio}" %}`
-  },
-  toPreview: function(obj) {
-    return (
-      '<div class="aspect-ratio" style="--aspect-ratio: "${obj.aspect_ratio}""><iframe class="youtube-player video video--youtube" src="https://youtube.com/embed/' + obj.id + ' " alt="Youtube Video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
-    );
-  }
-});
+  <script>
+    CMS.registerPreviewStyle("/static/css/main.css");
+    CMS.registerPreviewStyle("/static/css/grid.css");
   </script>
 </body>
+<script>
+  CMS.registerEditorComponent({
+      id: "youtube",
+      label: "Youtube",
+      pattern: /^{\% youtube \"(\S+)\", \"(\S+)\" \%}$/,
+      fields: [
+        {name: 'id', label: 'Youtube Video ID', widget: 'string'},
+        {name: 'aspect_ratio', label: 'Aspect ratio', widget: 'select', multiple: false, options: [ "16/9", "4/3", "1/1" ], default: "16/9"}
+      ],
+      fromBlock: function(match) {
+        function getVideoId(id) {
+          if (id.includes('watch?v=')) {
+            return id.split('watch?v=')[1];
+          } else if (id.includes('youtu.be/')) {
+            return id.split('youtu.be/')[1];
+          } else if (id.includes('embed/')) {
+            return id.split('embed/')[1];
+          } else {
+            return '';
+          }
+        }
+        return {
+          url: match[1],
+          id: getVideoId(match[1]),
+          aspect_ratio: match[2]
+        };
+        console.log(url);
+      },
+      toBlock: function(obj) {
+        return `{% youtube "${obj.id}", "${obj.aspect_ratio}" %}`;
+      },
+      toPreview: function(obj) {
+        return (
+          `<div class="aspect-ratio" style="--aspect-ratio: "${obj.aspect_ratio}""><iframe class="youtube-player" src="https://youtube.com/embed/${obj.id}" alt="Youtube Video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+        );
+      }
+      });
+  </script>
 </html>

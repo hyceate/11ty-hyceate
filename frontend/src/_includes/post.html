@@ -1,0 +1,21 @@
+---
+layout: base
+permalink: "posts/{{ title | slugify }}/index.html"
+---
+{% block content %}
+<section id="toBe">
+<article id="post-content">
+<section class="post-left">
+{{ content | safe }}
+</section>
+<aside class="post-right">
+<h1>{{ vtubername }}</h1>
+{% if "{{ artist }}" %}
+<section id="artist">
+<h3 class="artist-title">Artist</h3><p>{{artist}}</p></section>
+{% endif %}
+<p>{{ description | safe }}</p>
+</aside>
+</article>
+</section>
+{% endblock %}

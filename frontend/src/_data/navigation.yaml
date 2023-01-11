@@ -5,9 +5,3 @@ items:
   - text: Menu Two
     url: "#"
     tag: page
-  - text: Menu Three
-    url: "#"
-    tag: page
-  - text: Gallery
-    url: /posts
-    tag: page

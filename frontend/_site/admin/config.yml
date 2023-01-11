@@ -12,18 +12,28 @@ local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Posts"
-    name: "Posts"
+    name: "posts"
     folder: "src/posts/"
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
     create: true
     editor:
       preview: true
     fields:
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Vtuber", name: "vtubername", widget: "string" }
+      - { label: "Rigger", name: "rigger", widget: "string" }
+      - { label: "Artist", name: "artist", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "string", default: "post"}
       - widget: select
         label: "tags"
         name: "tags"
@@ -31,20 +41,40 @@ collections:
         create: true
         options: ["tier1", "tier2", "reels"]
 
-  - label: "Front Page Settings"
-    name: "Front Page Settings"
+  - name: "pages"
+    label: "Page"
+    folder: "src/pages"
+    delete: true
+    create: true # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Body", name: "body", widget: "string" }
+
+  - label: "Home Page Settings"
+    name: "HomePageSettings"
     description: "Change Front Page Data"
     editor:
       preview: true
     files:
-      - label: "Front Page"
-        name: "frontpage"
-        file: "src/_data/front_page.yaml"
+      - label: "Home Page"
+        name: "homepage"
+        file: "src/index.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base"}
           - { label: "Tag", name: "tag", widget: "hidden", default: "page"}
           - { label: "Title", name: "title", widget: string }
-          - { label: "Description", name: "description", widget: string }
+          - { label: "Description", name: "description", widget: markdown, required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false}
 
   - label: "Settings"
     name: "settings"
@@ -70,4 +100,8 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+          - label: Keywords
+            name: keywords
+            allow-add: true
+            widget: list
 

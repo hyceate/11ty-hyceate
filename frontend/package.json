@@ -1,9 +1,14 @@
 {
   "dependencies": {
     "@11ty/eleventy-plugin-webc": "^0.8.1",
+    "@babel/core": "7.0.0",
+    "@types/react": "16",
+    "eleventy-plugin-metagen": "^1.7.11",
+    "eleventy-plugin-youtube-embed": "^1.7.1",
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
-    "netlify-cms-app": "^2.15.72",
+    "minify": "^9.1.0",
+    "netlify-cms": "^2.10.192",
     "yaml": "^2.2.1"
   },
   "name": "frontend",
@@ -16,7 +21,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.16"
+    "@11ty/eleventy": "^2.0.0-canary.25",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "clean-css": "^5.3.1",
+    "uglify-js": "^3.17.4"
   },
   "description": ""
 }
