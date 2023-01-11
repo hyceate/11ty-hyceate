@@ -9,7 +9,7 @@ media_folder: "assets/img"
 public_folder: "/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: false
+local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Posts"
