@@ -7,12 +7,12 @@ eleventyComputed:
 {% metagen metadata %}
 {% block content %}
   <section class="landing">
-  <aside>
+  <article>
     <h1>{{ title }}</h1>
-  </aside>
-  <aside>
-  <h1>{{description}}</h1>
-</aside>
+  </article>
+  <article>
+  <p>{{description}}</p>
+</article>
   </section>
   <article class="home-content">{{ content | safe }}</article>
 {% endblock %}

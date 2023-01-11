@@ -7,7 +7,10 @@
   box-sizing: border-box;
 }
 html{
-  height:100%;
+  min-height:100vh;
+}
+a{
+  color:rgb(124, 106, 109);
 }
 a:visited{
   color:rgb(124, 106, 109);
@@ -17,7 +20,7 @@ a:visited{
   font-family: 'Rubik', sans-serif;
   text-align:center;
   padding-block:1rem;
-  position:fixed;
+  position:sticky;
   top:0;
   justify-content: center;
   z-index:2;
@@ -25,25 +28,23 @@ a:visited{
 }
 footer{
   height:var(--header-height);
+  margin-top:auto;
   bottom:0;
   text-align: center;
 }
 body{
+  display:flex;
+  flex-direction: column;
   font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
   margin:0;
-  min-height:100%;
+  min-height:100vh;
   background-color:var(--background-color);
   text-align:center;
   letter-spacing: .015em;
 }
 .landing{
-  padding:20rem 15rem;
   display:grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
-}
-.landing p{
-  font-family:"M Plus 2", sans-serif;
+  flex: 1 0 auto;
 }
 main{
   margin-top:var(--header-height);
@@ -80,7 +81,7 @@ main{
 }
 .page{
   display: inline-block;
-  width: 80%;
+  width: 100%;
   max-width: 100%;
   overflow: hidden;
   position: relative;
