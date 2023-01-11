@@ -5,7 +5,7 @@ vtubername: Broccolisama
 rigger: Hyceate
 artist: linkaimane
 layout: post
-permalink: /posts/{{title}}/
+permalink: /posts/{{title | slugify }}/
 thumbnail: icon.jpg
 date: 2023-01-09T06:02:33.669Z
 tags:
