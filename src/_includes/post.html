@@ -10,7 +10,7 @@ permalink: "posts/{{ title | slugify }}/index.html"
 </section>
 <aside class="post-right">
 <h1>{{ vtubername }}</h1>
-{% if "{{ artist }}" %}
+{% if {{ artist }} %}
 <section id="artist">
 <h3 class="artist-title">Artist</h3><p>{{artist}}</p></section>
 {% endif %}
