@@ -75,21 +75,20 @@ main{
 .navbar li:not(:last-child)::after{
   content:"◆";
 }
-.terms{
-  align-items: center;
-  width:50%;
-}
-.terms p{
-    text-align: start;
-}
 .page{
   display: inline-block;
-  width: 100%;
+  width: 80%;
   max-width: 100%;
   overflow: hidden;
   position: relative;
   vertical-align: top;
   margin: 0 auto;
+}
+.page p{
+  text-align: left;
+}
+.page ul{
+  text-align: left;
 }
 .video{
   display: inline-block;
