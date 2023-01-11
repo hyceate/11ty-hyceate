@@ -8,7 +8,6 @@
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "minify": "^9.1.0",
-    "netlify-cms": "^2.10.192",
     "yaml": "^2.2.1"
   },
   "name": "frontend",
