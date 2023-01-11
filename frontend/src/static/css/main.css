@@ -45,6 +45,8 @@ body{
 .landing{
   display:grid;
   flex: 1 0 auto;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
 }
 main{
   margin-top:var(--header-height);
