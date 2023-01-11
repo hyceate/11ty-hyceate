@@ -56,7 +56,7 @@ module.exports = function(eleventyConfig) {
 	// Let Eleventy transform HTML files 
 	// So that we can use .html
 	return {
-		templateFormats: ["md", "njk", "webc","html","jpg"],
+		templateFormats: ["md", "njk", "webc","html","jpg","png","webp"],
 		pathPrefix: "/",
 		dir: {
 			input: "src",
