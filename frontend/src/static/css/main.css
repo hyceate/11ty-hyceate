@@ -54,9 +54,9 @@ main{
 }
 .navbar{
   font-size:1.2rem;
-  display:inline-block;
+  display:inline-flexbox;
   list-style: none;
-  padding: 0rem 4rem;
+  margin: 0rem 4rem;
 }
 .gallerylist{
   display:inline;
