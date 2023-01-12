@@ -1,6 +1,24 @@
 .post-thumbnails{
-    aspect-ratio: 1/1;
-    max-width:100px;
+    max-width:200px;
+    width:100%;
+    height:auto;
+    display:flex;
+    object-fit: cover;
+  }
+.gallerylist{
+    display:inline;
+    padding:0;
+    margin:auto;
+    align-items: center;
+  }
+  .gallerylist li{
+    display:inline-flex;
+  }
+  .gallerylist a{
+    text-decoration: none;
+    text-transform: uppercase;
+    margin:5px;
+    flex: 1 0 200px;
   }
 .inserted{
     min-height:90%;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Rubik&display=swap');
 :root{
-  --background-color: #ffffff;
-  --logo-color:rgb(197, 139, 139);
+  --background-color: #f3edeb;
+  --logo-color:#c58b8b;
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -77,8 +77,8 @@ body{
   transition: .3s ease-out;
 }
 #logo:hover{
-  filter:brightness(25)
-  transition: .3s ease-out;
+  filter:brightness(25);
+  transition:.3s ease-out;
 }
 .navbar, .social-links{
   font-size:1.2rem;
