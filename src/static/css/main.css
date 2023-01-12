@@ -55,10 +55,11 @@ body{
 }
 .landing h1{
   text-align: center;
-  font-size:24vw;
+  font-size:10vw;
   text-transform: lowercase;
-  color:pink;
-  font-family:Rubik;
+  color:rgb(255,166,148);
+  font-family:"Rubik";
+  font-weight:100;
   letter-spacing:0px;
   display:flex;
   margin:0;
@@ -70,20 +71,14 @@ body{
 }
 #logo{
   display:flex;
-  width:120px;
+  width:80px;
   align-self: flex-start;
   color:var(--logo-color);
   transition: .3s ease-out;
 }
-.svg-logo{
-  fill:none;stroke:var(--logo-color);stroke-linecap:round;stroke-linejoin:bevel;stroke-width:3.719799420887232px
-}
 #logo:hover{
   filter:brightness(25)
   transition: .3s ease-out;
-}
-.fallback{
-  display:none;
 }
 .navbar, .social-links{
   font-size:1.2rem;
