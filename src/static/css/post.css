@@ -24,14 +24,24 @@
 }
 .post-right{
     flex: 1 5 400px;
-    -webkit-box-pack: center;
-    justify-content: center;
+    padding-block:1rem;
+    padding-inline: 1rem;
     overflow:scroll;
+    text-align: left;
 }
 .post-right h1{
     font-size:2rem;
     letter-spacing: .2rem;
+    padding:0px;
+    margin:0px 0px 1rem 0px;
 }
 .post-right p{
-    
+    margin-block:0px;
+}
+.artist-title, .rigger-title{
+    margin-block:0px;
+    padding-block:0px;
+}
+#artist, #rigger{
+    padding-bottom:1rem;
 }

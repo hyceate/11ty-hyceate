@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Rubik&display=swap');
 :root{
-  --background-color: #ece2e2;
+  --background-color: #ffffff;
+  --logo-color:rgb(197, 139, 139);
 }
 *, *:before, *:after {
   box-sizing: border-box;
@@ -20,9 +21,11 @@ a:visited{
   padding-block:1rem;
   position:sticky;
   top:0;
-  display:flex;
-  justify-content: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index:2;
+  padding-inline:2rem;
   background-color:var(--background-color);
   border-bottom:#6b6b6b 1px solid;
 }
@@ -33,10 +36,10 @@ footer{
   text-align: center;
 }
 body{
+  margin:0;
   display:flex;
   flex-direction: column;
   font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
-  margin:0;
   min-height:100vh;
   background-color:var(--background-color);
   text-align:center;
@@ -48,15 +51,32 @@ body{
   align-items: center;
   grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
 }
-main{
-  margin-top:var(--header-height);
-  text-align: center;
+#logo{
+  display:flex;
+  width:120px;
+  align-self: flex-start;
+  color:var(--logo-color);
+  transition: .3s ease-out;
 }
-.navbar{
+.svg-logo{
+  fill:none;stroke:var(--logo-color);stroke-linecap:round;stroke-linejoin:bevel;stroke-width:3.719799420887232px
+}
+#logo:hover{
+  filter:brightness(25)
+  transition: .3s ease-out;
+}
+.fallback{
+  display:none;
+}
+.navbar, .social-links{
   font-size:1.2rem;
-  display:inline-flexbox;
+  display:inline-flex;
   list-style: none;
-  margin: 0rem 4rem;
+  margin: 0rem;
+}
+.social-links{
+  margin:0;
+  padding:0;
 }
 .gallerylist{
   display:inline;
@@ -64,16 +84,21 @@ main{
   margin:auto;
   align-items: center;
 }
+.gallerylist li{
+  display:inline-flex;
+}
 .navbar a, .gallerylist a{
   text-decoration: none;
   text-transform: uppercase;
 }
-.navbar li, .gallerylist li{
-  display:inline-block;
+.navbar li, .social-links li{
   padding:2px;
+  display: inline-flex;
+  align-items: baseline;
 }
 .navbar li:not(:last-child)::after{
   content:"◆";
+  margin: 0 0 0 3px;
 }
 .page{
   display: inline-block;

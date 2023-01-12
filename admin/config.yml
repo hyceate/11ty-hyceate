@@ -27,11 +27,15 @@ collections:
         media_library:
           config:
             multiple: false
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Vtuber", name: "vtubername", widget: "string" }
-      - { label: "Rigger", name: "rigger", widget: "string" }
-      - { label: "Artist", name: "artist", widget: "string" }
+      - { label: "Rigger", name: "rigger", widget: "string", required: false }
+      - { label: "Rigger Twitter", name: "rtwitter", widget: "string", required: false }
+      - { label: "Rigger Website", name: "rwebsite", widget: "string", required: false }
+      - { label: "Artist", name: "artist", widget: "string", required: false }
+      - { label: "Artist Twitter", name: "atwitter", widget: "string", required: false }
+      - { label: "Artist Website", name: "awebsite", widget: "string", required: false }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "string", default: "post"}
