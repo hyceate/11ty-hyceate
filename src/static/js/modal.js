@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded",function(){
     modal.classList.add("hide-modal");
     var content = modal.querySelector(".inserted");
     modal.addEventListener("transitionend", function() {
+      if(event.target.classList.contains("hide-modal")){
       modal.style.display = "none";
       content.innerHTML="";
+      }
     });
   }
   // When the user clicks on a modal link, fetch the page's HTML content and show it in the modal

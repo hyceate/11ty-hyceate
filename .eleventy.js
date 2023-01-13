@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
 		  else if (id.includes('youtu.be/')) {return id.split('youtu.be/')[1];} else if (id.includes('embed/')) {return id.split('embed/')[1];} 
 		  else {return '';}}
 		const videoId = getVideoId(youtubeUrl);
-		return `<div class="video"><div class="aspect-ratio" style="--aspect-ratio: ${aspectRatio}"><iframe class="youtube-player" src="https://youtube.com/embed/${videoId}?autoplay=1&mute=1" alt="Youtube Video" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
+		return `<div class="video"><div class="aspect-ratio" style="--aspect-ratio: ${aspectRatio}"><iframe class="youtube-player" src="https://youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&modestbranding=1" alt="Youtube Video" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
 	  });
 	//Passthroughs
 	eleventyConfig.addPassthroughCopy("src/static");
