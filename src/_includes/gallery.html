@@ -9,7 +9,7 @@ eleventyComputed:
 {{content | safe}}
 <ul class="gallerylist">
 {%- for post in collections.posts -%}
-  <li><a class="modal-link" href="{{ post.url }}"><img class="post-thumbnails" src="{{post.url}}{{post.data.thumbnail | url | safe}}" style="aspect-ratio:1/1;background-color:aliceblue;"/>{# {{ post.data.title }} #}</a></li>
+  <li><a class="modal-link" href="{{ post.url }}"><img class="post-thumbnails" src="{{post.url}}{{post.data.thumbnail | url | safe}}"/>{# {{ post.data.title }} #}</a></li>
 {%- endfor -%}
 </ul>
 {% endblock %}
