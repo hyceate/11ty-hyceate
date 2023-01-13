@@ -124,7 +124,7 @@ body{
 .navbar li, .social-links li{
   padding:2px;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
 }
 .navbar li:not(:last-child)::after{
   content:"◆";
