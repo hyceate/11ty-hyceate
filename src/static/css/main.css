@@ -24,17 +24,26 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0;
 }
+h1,h2,h3,h4{
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
 .header{
   font-family: 'Rubik', sans-serif;
   text-align:center;
   padding-block:1rem;
+  padding-inline:2rem;
   position:sticky;
+  position: -webkit-sticky;
   top:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index:2;
-  padding-inline:2rem;
   background-color:var(--background-color);
   border-bottom:#6b6b6b 1px solid;
 }
@@ -57,13 +66,21 @@ body{
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
+.body{
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
+  text-align:center;
+}
 .landing{
   display:grid;
-  flex: 1 0 auto;
   align-items: center;
-  grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
   align-content: center;
   justify-items: center;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  height: 100%;
+  width: 100%;
 }
 .landing h1{
   text-align: center;
@@ -73,8 +90,8 @@ body{
   font-family:"Rubik";
   font-weight:100;
   letter-spacing:0px;
-  display:flex;
-  margin:0;
+  bottom:0;
+  position:absolute;
 }
 .landing h1:after {
   content: "";
@@ -130,39 +147,4 @@ body{
 }
 .page ul{
   text-align: left;
-}
-.video{
-  display: inline-block;
-  width: 100rem;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
-  margin: 0 auto;
-}
-.aspect-ratio, .eleventy-plugin-youtube-embed {
-  position: relative;
-  width: 100%;
-  padding-bottom: calc(100% / (16/9));
-  /* padding-top: calc(100% / (var(--aspect-ratio))); */
-  margin:auto;
-}
-.youtube-player::before{  
-  padding-top:100%;
-  content: '';
-    display: block;
-    width: 100%;
-}
-.youtube-player {
-  position: absolute;
-  object-fit: contain;
-  bottom:0;
-  right:0;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  background-color: #000000;
-  overflow: hidden;
 }

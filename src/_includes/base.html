@@ -32,7 +32,9 @@ eleventyComputed:
     </head>
   <body class="col-12">
     {% include "src/_includes/_partials/header.html" %}
+    <div class="body col-12">
     {{ content | safe }}
+    </div>
   </body>
   {%renderTemplate "webc"%}
   <site-footer></site-footer>
