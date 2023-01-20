@@ -17,6 +17,9 @@ a {
 a:visited {
   color: rgb(124, 106, 109);
 }
+a:hover{
+  color:black;
+}
 ul {
   -webkit-margin-before: 0;
   margin-block-start: 0;
@@ -43,6 +46,10 @@ h4 {
   display: block;
   font-weight: bold;
 }
+h3{
+  text-align: left;
+  margin-top:20px;
+}
 .header {
   padding-block: 1rem;
   padding-inline: 2rem;
@@ -63,6 +70,7 @@ footer {
   height: var(--header-height);
   margin-top: auto;
   text-align: center;
+  color:var(--logo-color);
 }
 body {
   text-rendering: optimizeLegibility;
