@@ -9,4 +9,5 @@ eleventyNavigation:
   body: Portfolio Gallery
 ---
 ## Projects Showcase
-Please email me or contact me on my various social media. I check my emails regularly.
+
+Please email or contact me on my various social media. I check my emails regularly.

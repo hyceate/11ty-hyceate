@@ -1,147 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Rubik&display=swap');
-:root{
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Rubik&family=Lexend&display=swap");
+:root {
   --background-color: #f3edeb;
-  --logo-color:#c58b8b;
+  --logo-color: #c58b8b;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-html{
-  min-height:100vh;
+html {
+  min-height: 100vh;
 }
-a{
-  color:rgb(124, 106, 109);
+a {
+  color: rgb(124, 106, 109);
 }
-a:visited{
-  color:rgb(124, 106, 109);
+a:visited {
+  color: rgb(124, 106, 109);
 }
 ul {
-  display: block;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-}
-h1,h2,h3,h4{
   display: block;
+}
+h1,
+h2,
+h3,
+h4 {
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  display: block;
   font-weight: bold;
 }
-.header{
-  font-family: 'Rubik', sans-serif;
-  text-align:center;
-  padding-block:1rem;
-  padding-inline:2rem;
-  position:sticky;
-  position: -webkit-sticky;
-  top:0;
+.header {
+  padding-block: 1rem;
+  padding-inline: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index:2;
-  background-color:var(--background-color);
-  border-bottom:#6b6b6b 1px solid;
-}
-footer{
-  height:var(--header-height);
-  margin-top:auto;
-  bottom:0;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 2;
+  top: 0;
+  background-color: var(--background-color);
+  border-bottom: #6b6b6b 1px solid;
+  font-family: "Rubik", sans-serif;
   text-align: center;
 }
-body{
-  margin:0;
-  display:flex;
-  flex-direction: column;
-  font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
-  min-height:100vh;
-  background-color:var(--background-color);
-  text-align:center;
+footer {
+  bottom: 0;
+  height: var(--header-height);
+  margin-top: auto;
+  text-align: center;
+}
+body {
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-}
-.body{
-  margin:0;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
   font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
-  text-align:center;
+  text-align: center;
 }
-.landing{
-  display:grid;
+.body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 30px;
+  font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.landing {
+  justify-items: center;
+  display: grid;
   align-items: center;
   align-content: center;
-  justify-items: center;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  height: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   width: 100%;
+  height: 100%;
 }
-.landing h1{
+.landing h1 {
+  position: absolute;
+  bottom: 0;
+  font-size: 10vw;
+  font-family: "Rubik";
+  font-weight: 100;
+  color: rgb(255, 166, 148);
   text-align: center;
-  font-size:10vw;
   text-transform: lowercase;
-  color:rgb(255,166,148);
-  font-family:"Rubik";
-  font-weight:100;
-  letter-spacing:0px;
-  bottom:0;
-  position:absolute;
+  letter-spacing: 0px;
 }
 .landing h1:after {
   content: "";
   display: inline-block;
   width: 100%;
 }
-#logo{
-  display:flex;
-  width:50px;
+#logo {
+  display: flex;
   align-self: flex-start;
-  color:var(--logo-color);
-  transition: .3s ease-out;
+  width: 50px;
+  transition: 0.3s ease-out;
+  border-radius: 50px;
+  color: var(--logo-color);
 }
-#logo:hover{
-  filter:brightness(25);
-  transition:.3s ease-out;
+#logo:hover {
+  filter: contrast(200%);
+  transition: 0.3s ease-out;
 }
-.navbar, .social-links{
-  font-size:1.2rem;
-  display:inline-flex;
-  list-style: none;
-  margin: 0rem;
+.navbar,
+.social-links {
   padding-inline: 1rem;
+  display: inline-flex;
+  margin: 0rem;
+  font-size: 1.2rem;
+  list-style: none;
 }
-.social-links{
-  margin:0;
-  padding:0;
+.social-links {
+  margin: 0;
+  padding: 0;
 }
-.navbar a{
+.navbar a {
   text-decoration: none;
   text-transform: uppercase;
 }
-.navbar li, .social-links li{
-  padding:2px;
+.navbar li,
+.social-links li {
   display: inline-flex;
   align-items: center;
+  padding: 2px;
 }
-.navbar li:not(:last-child)::after{
-  content:"◆";
+.navbar li:not(:last-child)::after {
+  content: "◆";
   margin: 0 0 0 3px;
 }
-.page{
+.page {
   display: inline-block;
+  position: relative;
+  overflow: hidden;
   width: 80%;
   max-width: 100%;
-  overflow: hidden;
-  position: relative;
-  vertical-align: top;
   margin: 0 auto;
+  vertical-align: top;
 }
-.page p{
+.page p {
   text-align: left;
 }
-.page ul{
+.page ul {
   text-align: left;
 }

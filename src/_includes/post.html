@@ -2,46 +2,64 @@
 layout: base
 permalink: "posts/{{ title | slugify }}/index.html"
 ---
+
 {% block content %}
 <section id="toBe">
-<article id="post-content">
-<section class="post-left">
-{{ content | safe }}
-</section>
-<aside class="post-right">
-<h1>{{ vtubername }}</h1>
-    {% if artist %}
-    <section id="artist">
-    <h3 class="artist-title">Artist</h3>
-    <p>{{artist}}</p>
-    <section class="links">
-    <ul class="social-links">
-        {% if atwitter %}
-        <li><a href="https://twitter.com/{{ atwitter | safe}}" alt="{{artist}}'s twitter"><i class="fa-brands fa-square-twitter"></i></a></li>
-        {% endif %}
-        {%if awebsite%}
-        <li><a href="{{ awebsite }}" alt="{{artist}}'s website"><i class="fa-sharp fa-solid fa-globe"></i></a></li>
-        {%endif%}
-    </ul>
-    </section></section>
-    {% endif %}
-    {% if rigger %}
-    <section id="rigger">
-    <h3 class="rigger-title">Rigger</h3>
-    <p>{{rigger}}</p>
-    <section class="links">
-    <ul class="social-links">
-        {% if atwitter %}
-        <li><a href="https://twitter.com/{{ rtwitter | safe}}" alt="{{rigger}}'s twitter"><i class="fa-brands fa-square-twitter"></i></a></li>
-        {% endif %}
-        {%if rwebsite%}
-        <li><a href="{{ rwebsite }}" alt="{{rigger}}'s website"><i class="fa-sharp fa-solid fa-globe"></i></a></li>
-        {%endif%}
-    </ul>
-    </section></section>
-    {% endif %}
-<p>{{ description | safe }}</p>
-</aside>
-</article>
+  <article id="post-content">
+    <section class="post-left">{{ content | safe }}</section>
+    <aside class="post-right">
+      <h1>{{ vtubername }}</h1>
+      {% if artist %}
+      <section id="artist">
+        <h3 class="artist-title">Artist</h3>
+        <p>{{artist}}</p>
+        <section class="links">
+          <ul class="social-links">
+            {% if atwitter %}
+            <li>
+              <a
+                href="https://twitter.com/{{ atwitter | safe}}"
+                alt="{{artist}}'s twitter"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+            </li>
+            {% endif %} {%if awebsite%}
+            <li>
+              <a href="{{ awebsite }}" alt="{{artist}}'s website"
+                ><i class="fa-sharp fa-solid fa-globe"></i
+              ></a>
+            </li>
+            {%endif%}
+          </ul>
+        </section>
+      </section>
+      {% endif %} {% if rigger %}
+      <section id="rigger">
+        <h3 class="rigger-title">Rigger</h3>
+        <p>{{rigger}}</p>
+        <section class="links">
+          <ul class="social-links">
+            {% if atwitter %}
+            <li>
+              <a
+                href="https://twitter.com/{{ rtwitter | safe}}"
+                alt="{{rigger}}'s twitter"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+            </li>
+            {% endif %} {%if rwebsite%}
+            <li>
+              <a href="{{ rwebsite }}" alt="{{rigger}}'s website"
+                ><i class="fa-sharp fa-solid fa-globe"></i
+              ></a>
+            </li>
+            {%endif%}
+          </ul>
+        </section>
+      </section>
+      {% endif %}
+      <p>{{ description | safe }}</p>
+    </aside>
+  </article>
 </section>
 {% endblock %}

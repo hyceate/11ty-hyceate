@@ -1,119 +1,122 @@
-.gallerylist{
-    display:flex;
-    justify-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-inline-start: 0;
-  }
-.gallerylist li{
-    list-style: none;
-    margin: 0.5em;
-    flex:1 0 20%;
-}
-.post-thumbnails{
-    object-fit: cover;
-    border-radius: 5px;
-    height:150px;
-    max-width:100%;
-  }
-img.post-thumbnails {
-    display:flex;
-    width:100%;
-    object-fit: cover;
-  }
-@media screen and (max-width: 900px){
-.gallerylist{
-    justify-content: space-between;
+.gallerylist {
+  justify-items: center;
+  -webkit-box-pack: justify;
+  padding-inline-start: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .gallerylist li {
-    flex: 10 1 45%;
+  flex: 1 0 20%;
+  margin: 0.5em;
+  list-style: none;
 }
-.post-thumbnails{
-    border-radius: 5px;
-    width:100%;
-  }
+.post-thumbnails {
+  object-fit: cover;
+  max-width: 100%;
+  height: 150px;
+  border-radius: 5px;
+}
 img.post-thumbnails {
-    height:200px;
-    display:flex;
+  object-fit: cover;
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .gallerylist {
+    justify-content: space-between;
   }
-}
-.inserted{
-    min-height:90%;
-    overflow:auto;
-    display:flex;
-}
-#post-content{
-    display: flex;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    margin: 0px auto;
-    flex-wrap: wrap;
-    overflow:scroll;
-}
-.post-left{
-    margin: auto;
-    position:relative;
-    display:flex;
-    flex: 10 1 400px;
-    overflow:scroll;
-}
-.post-right{
-    flex: 1 5 400px;
-    padding-block:1rem;
-    padding-inline: 1rem;
-    overflow:scroll;
-    text-align: left;
-}
-.post-right h1{
-    font-size:2rem;
-    letter-spacing: .2rem;
-    padding:0px;
-    margin:0px 0px 1rem 0px;
-}
-.post-right p{
-    margin-block:0px;
-}
-.artist-title, .rigger-title{
-    margin-block:0px;
-    padding-block:0px;
-}
-#artist, #rigger{
-    padding-bottom:1rem;
-}
-.video{
-    display: inline-block;
-    width: 100rem;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    vertical-align: top;
-    margin: 0 auto;
+  .gallerylist li {
+    flex: 10 1 45%;
   }
-  .aspect-ratio, .eleventy-plugin-youtube-embed {
-    position: relative;
+  .post-thumbnails {
     width: 100%;
-    padding-bottom: calc(100% / (16/9));
-    /* padding-top: calc(100% / (var(--aspect-ratio))); */
-    margin:auto;
-  }
-  .youtube-player::before{  
-    padding-top:100%;
-    content: '';
-      display: block;
-      width: 100%;
-  }
-  .youtube-player {
-    position: absolute;
-    object-fit: contain;
-    bottom:0;
-    right:0;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
     border-radius: 5px;
-    border:0;
-    overflow: hidden;
   }
+  img.post-thumbnails {
+    display: flex;
+    height: 200px;
+  }
+}
+.inserted {
+  display: flex;
+  overflow: auto;
+  min-height: 90%;
+}
+#post-content {
+  -webkit-box-pack: end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  overflow: scroll;
+  margin: 0px auto;
+}
+.post-left {
+  display: flex;
+  flex: 10 1 400px;
+  position: relative;
+  overflow: scroll;
+  margin: auto;
+}
+.post-right {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  flex: 1 5 400px;
+  overflow: scroll;
+  text-align: left;
+}
+.post-right h1 {
+  margin: 0px 0px 1rem 0px;
+  padding: 0px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+.post-right p {
+  margin-block: 0px;
+}
+.artist-title,
+.rigger-title {
+  margin-block: 0px;
+  padding-block: 0px;
+}
+#artist,
+#rigger {
+  padding-bottom: 1rem;
+}
+.video {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 100rem;
+  max-width: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+}
+.aspect-ratio,
+.eleventy-plugin-youtube-embed {
+  /* padding-top: calc(100% / (var(--aspect-ratio))); */
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding-bottom: calc(100% / (16 / 9));
+}
+.youtube-player::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.youtube-player {
+  object-fit: contain;
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+}

@@ -4,27 +4,37 @@ eleventyComputed:
   title: "{{title}}"
   description: "{{ description }}"
 ---
-{% metagen metadata %}
-{% block content %}
-{{content | safe}}
+
+{% metagen metadata %} {% block content %} {{content | safe}}
 <ul class="gallerylist">
-{%- for post in collections.posts -%}
-  <li><a class="modal-link" href="{{ post.url }}"><img class="post-thumbnails" src="{{post.url}}{{post.data.thumbnail | url | safe}}"/>{# {{ post.data.title }} #}</a></li>
-{%- endfor -%}
+  {%- for post in collections.posts -%}
+  <li>
+    <a class="modal-link" href="{{ post.url }}"
+      ><img
+        class="post-thumbnails"
+        src="{{post.url}}{{post.data.thumbnail | url | safe}}"
+      />{# {{ post.data.title }} #}</a
+    >
+  </li>
+  {%- endfor -%}
 </ul>
 {% endblock %}
- <!-- The Modal -->
- <div id="myModal" class="modal hide-modal"> 
+<!-- The Modal -->
+<div id="myModal" class="modal hide-modal">
   <!-- Modal content -->
   <div class="modal-content">
     <button class="closeButton">
       <i class="fa-solid fa-square-xmark"></i>
-  </button>
+    </button>
     <section class="inserted"></section>
   </div>
-</div> 
+</div>
 
-{% set js %}
-{% include "src/static/js/modal.js" %}
-{% endset %}
-<script>{{ js | jsmin | safe }}</script>
+{% set js %} {% include "src/static/js/modal.js" %} {% endset %}
+<script>
+  {
+    {
+      js | jsmin | safe;
+    }
+  }
+</script>

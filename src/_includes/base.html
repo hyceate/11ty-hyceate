@@ -5,36 +5,38 @@ eleventyComputed:
   name: "{{page.title}}"
   keywords: "{{settings.keywords}}"
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta description="{{description}}"/>
-    <meta name="keywords" content="{{keywords}}"/>
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.jpg">
+    <meta description="{{description}}" />
+    <meta name="keywords" content="{{keywords}}" />
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.jpg" />
     <title>{{ title }}</title>
-    {% metagen
-      title=title or metadata.title,
-      desc=desc or metadata.desc,
-      url=url + page.url
-  %}
-  <script src="https://kit.fontawesome.com/f7a8459064.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pjax@VERSION/pjax.min.js"></script>
-    <link rel="stylesheet" href="/static/css/main.css"><link rel="stylesheet" href="/static/css/grid.css"><link rel="stylesheet" href="/static/css/modal.css"><link rel="stylesheet" href="/static/css/post.css">
-{#     {% set css %}
-    {% include "src/static/css/main.css" %}
-    {% include "src/static/css/grid.css" %}
-    {% endset %}
-    <style>{{ css | cssmin | safe }}</style> #}
-    
-    </head>
+    {% metagen title=title or metadata.title, desc=desc or metadata.desc,
+    url=url + page.url %}
+    <script
+      src="https://kit.fontawesome.com/f7a8459064.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/pjax@VERSION/pjax.min.js"></script>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="/static/css/grid.css" />
+    <link rel="stylesheet" href="/static/css/modal.css" />
+    <link rel="stylesheet" href="/static/css/post.css" />
+    {# {% set css %} {% include "src/static/css/main.css" %} {% include
+    "src/static/css/grid.css" %} {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+    #}
+  </head>
   <body class="col-12">
     {% include "src/_includes/_partials/header.html" %}
-    <div class="body col-12">
-    {{ content | safe }}
-    </div>
+    <div class="body col-12">{{ content | safe }}</div>
   </body>
   {%renderTemplate "webc"%}
   <site-footer></site-footer>
