@@ -18,20 +18,28 @@ a:visited {
   color: rgb(124, 106, 109);
 }
 ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
   display: block;
 }
 h1,
 h2,
 h3,
 h4 {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
   display: block;
   font-weight: bold;
 }
@@ -65,15 +73,15 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--background-color);
-  font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
   text-align: center;
+  font-family: "Lexend", "Rubik", "Helvetica", sans-serif;
 }
 .body {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding-top: 30px;
-  font-family: "M PLUS 2", Arial, Helvetica, sans-serif;
+  line-height:1.5;
   text-align: center;
 }
 .landing {
@@ -110,7 +118,8 @@ body {
   color: var(--logo-color);
 }
 #logo:hover {
-  filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
   transition: 0.3s ease-out;
 }
 .navbar,
@@ -119,6 +128,7 @@ body {
   display: inline-flex;
   margin: 0rem;
   font-size: 1.2rem;
+  font-family: "Rubik", "Helvetica", sans-serif;
   list-style: none;
 }
 .social-links {
@@ -149,8 +159,10 @@ body {
   vertical-align: top;
 }
 .page p {
+  line-height: 1.5;
   text-align: left;
 }
 .page ul {
+  line-height: 1.5;
   text-align: left;
 }

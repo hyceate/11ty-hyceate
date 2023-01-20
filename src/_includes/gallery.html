@@ -7,16 +7,17 @@ eleventyComputed:
 
 {% metagen metadata %} {% block content %} {{content | safe}}
 <ul class="gallerylist">
-  {%- for post in collections.posts -%}
+  {% for post in collections.posts %}
   <li>
     <a class="modal-link" href="{{ post.url }}"
       ><img
         class="post-thumbnails"
         src="{{post.url}}{{post.data.thumbnail | url | safe}}"
-      />{# {{ post.data.title }} #}</a
+        alt="{{post.title}}"
+      /></a
     >
   </li>
-  {%- endfor -%}
+  {% endfor %}
 </ul>
 {% endblock %}
 <!-- The Modal -->
@@ -32,9 +33,5 @@ eleventyComputed:
 
 {% set js %} {% include "src/static/js/modal.js" %} {% endset %}
 <script>
-  {
-    {
-      js | jsmin | safe;
-    }
-  }
+  {{ js | jsmin | safe }}
 </script>
