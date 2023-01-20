@@ -27,22 +27,7 @@ img.post-thumbnails {
   display: flex;
   width: 100%;
 }
-@media screen and (max-width: 900px) {
-  .gallerylist {
-    justify-content: space-between;
-  }
-  .gallerylist li {
-    flex: 10 1 45%;
-  }
-  .post-thumbnails {
-    width: 100%;
-    border-radius: 5px;
-  }
-  img.post-thumbnails {
-    display: flex;
-    height: 200px;
-  }
-}
+
 .inserted {
   display: flex;
   overflow: auto;
@@ -62,19 +47,21 @@ img.post-thumbnails {
   position: relative;
   overflow: scroll;
   margin: auto;
+  padding:15px;
 }
 .post-right {
+  max-width:100%;
   padding-block: 1rem;
   padding-inline: 1rem;
   flex: 1 5 400px;
-  overflow: scroll;
+  overflow-y: scroll;
   text-align: left;
 }
 .post-right h1 {
-  margin: 0px 0px 1rem 0px;
+  margin: 0 0 15px;
   padding: 0px;
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 .post-right p {
   margin-block: 0px;
@@ -86,7 +73,7 @@ img.post-thumbnails {
 }
 #artist,
 #rigger {
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 }
 .video {
   display: inline-block;
@@ -121,6 +108,33 @@ img.post-thumbnails {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  background-color: transparent;
   border: 0;
   border-radius: 5px;
+}
+.social-links .fa-brands,.social-links .fa-sharp{
+  font-size:1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fffefb, #dbd5d4);
+  box-shadow:  13px 13px 25px #e9e4e2,
+               -13px -13px 25px #fdf6f4;
+}
+@media screen and (max-width: 900px) {
+  .gallerylist {
+    justify-content: space-between;
+  }
+  .gallerylist li {
+    flex: 10 1 45%;
+  }
+  .post-thumbnails {
+    width: 100%;
+    border-radius: 5px;
+  }
+  img.post-thumbnails {
+    display: flex;
+    height: 200px;
+  }
+  .post-left {
+    padding:5px;
+  }
 }

@@ -19,13 +19,13 @@ a:visited {
 }
 ul {
   -webkit-margin-before: 0;
-          margin-block-start: 0;
+  margin-block-start: 0;
   -webkit-margin-after: 0;
-          margin-block-end: 0;
+  margin-block-end: 0;
   -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
+  margin-inline-start: 0px;
   -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-inline-end: 0px;
   display: block;
 }
 h1,
@@ -33,13 +33,13 @@ h2,
 h3,
 h4 {
   -webkit-margin-before: 0em;
-          margin-block-start: 0em;
+  margin-block-start: 0em;
   -webkit-margin-after: 0em;
-          margin-block-end: 0em;
+  margin-block-end: 0em;
   -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
+  margin-inline-start: 0px;
   -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin-inline-end: 0px;
   display: block;
   font-weight: bold;
 }
@@ -81,7 +81,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding-top: 30px;
-  line-height:1.5;
+  line-height: 1.5;
   text-align: center;
 }
 .landing {
@@ -119,7 +119,7 @@ body {
 }
 #logo:hover {
   -webkit-filter: contrast(200%);
-          filter: contrast(200%);
+  filter: contrast(200%);
   transition: 0.3s ease-out;
 }
 .navbar,
@@ -127,7 +127,7 @@ body {
   padding-inline: 1rem;
   display: inline-flex;
   margin: 0rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Rubik", "Helvetica", sans-serif;
   list-style: none;
 }
@@ -136,8 +136,12 @@ body {
   padding: 0;
 }
 .navbar a {
+  font-size: 1.1rem;
+  padding: 10px 15px;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 16px;
+  background: #f3edeb;
 }
 .navbar li,
 .social-links li {
@@ -146,8 +150,12 @@ body {
   padding: 2px;
 }
 .navbar li:not(:last-child)::after {
-  content: "◆";
-  margin: 0 0 0 3px;
+  content: "\2B29";
+  margin: 0 0 0 5px;
+}
+a[data-current="current item"] {
+  background-color: var(--logo-color);
+  color: var(--background-color);
 }
 .page {
   display: inline-block;

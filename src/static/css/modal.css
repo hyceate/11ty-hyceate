@@ -12,6 +12,8 @@
   min-height: 100%; /* Full height */
   padding-top: -var(--header-height); /* Location of the box */
   background-color: rgba(105, 102, 102, 0.637);
+  -webkit-backdrop-filter: blur(5px);  
+  backdrop-filter: blur(5px);
 }
 .modal.hide-modal {
   opacity: 0;
@@ -27,21 +29,17 @@
 }
 /* Modal Content */
 .modal-content {
-  box-shadow: rgb(0 0 0 / 20%) 0px 1rem 2rem;
   overflow-y: auto;
   width: 80%;
   max-height: 100%;
-  margin: auto;
   margin: 0px auto;
   padding: 20px;
-  background-color: var(--background-color);
-  border: rgba(104, 81, 81, 0.349) 1px solid;
-  border-radius: 15px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, var(--background-color), #fffefb);
 }
 button {
-  margin: -70px -13px;
-  padding: 5px;
-  background-color: transparent;
+  margin: -50px -14px;
+  padding: 0px;
   border: 0;
 }
 /* The Close Button */
@@ -51,12 +49,27 @@ button {
   right: 8.5%;
   font-size: 4rem;
   color: #e7a9a7;
+  width:50px;
+  height:50px;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #fffefb, #dbd5d4);
+  box-shadow: 2px 2px 5px #e9e4e2, -1px -1px 5px #fdf6f4
 }
-
+.closeButton:after{
+  content: "\00d7";
+  vertical-align: text-top;
+  position:absolute;
+  left:6px;
+  top:-12px;
+}
 .closeButton:hover,
 .closeButton:focus {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   color: #000;
   text-decoration: none;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #fffefb, #dbd5d4);
+  box-shadow: inset 3px 3px 6px #e9e4e2,
+              inset -3px -3px 6px #fdf6f4;
 }
