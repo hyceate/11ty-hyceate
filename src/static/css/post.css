@@ -51,11 +51,10 @@ img.post-thumbnails {
 }
 .post-right {
   max-width:100%;
-  padding-block: 1rem;
-  padding-inline: .5rem;
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
   flex: 1 5 400px;
   overflow-y: scroll;
-  text-align: left;
   border-radius: 4px;
   background: #f3edeb;
   box-shadow:  5px 5px 13px #c0bbba,
@@ -63,31 +62,27 @@ img.post-thumbnails {
 }
 .post-right h1 {
   margin: 0 0 15px;
-  padding: 0px 25px;
-  font-size: 3vw;
+  padding: 5px 25px;
+  font-size: 2rem;
   letter-spacing: 1px;
   border-radius: 4px;
   background: #f3edeb;
-  box-shadow:  5px 5px 13px #e7e1df,
-               -5px -5px 13px #fff9f7;
+  box-shadow:  5px 5px 10px #d1ccca,
+               -5px -5px 10px #ffffff;
 }
 .post-right p {
   margin-block: 0px;
   margin-inline:5px;
   display:inline-block;
-  font-size:2vw;
+  font-size:1.5rem;
 }
 .artist-title,
 .rigger-title {
   margin-block: 0px;
   padding-block: 0px;
   display:inline;
-  font-size:2vw;
+  font-size:1.5rem;
   letter-spacing: 0px;
-  border-radius: 4px;
-  background: #f3edeb;
-  box-shadow:  5px 5px 13px #e7e1df,
-               -5px -5px 13px #fff9f7;
 }
 #artist,
 #rigger {
@@ -130,15 +125,17 @@ img.post-thumbnails {
   border: 0;
   border-radius: 5px;
 }
+section.links{
+}
 .social-links .fa-brands,.social-links .fa-sharp{
-  font-size:2vw;
+  font-size:1.3rem;
   padding:5px;
   border-radius: 5px;
   margin-right:5px;
   border-radius: 4px;
   background: #f3edeb;
-  box-shadow:  5px 5px 13px #d3cecc,
-               -5px -5px 13px #ffffff;
+  box-shadow:  5px 5px 10px #d1ccca,
+               -5px -5px 10px #ffffff;
 }
 @media screen and (max-width: 900px) {
   .gallerylist {
@@ -157,5 +154,8 @@ img.post-thumbnails {
   }
   .post-left {
     padding:5px;
+  }
+  .post-right p, .post-right h1, .artist-title, .rigger-title{
+    font-size:1rem;
   }
 }
