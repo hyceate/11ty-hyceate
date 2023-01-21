@@ -2,7 +2,7 @@
 :root {
   --background-color: #f3edeb;
   --logo-color: #c58b8b;
-  --text-color: #363434;
+  --text-color: #473c3c;
 }
 *,
 *:before,
@@ -61,7 +61,7 @@ h3{
   position: -webkit-sticky;
   z-index: 2;
   top: 0;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #f3edeb);
   border-bottom: #6b6b6b 1px solid;
   font-family: "Rubik", sans-serif;
   text-align: center;
@@ -86,7 +86,7 @@ body {
   font-family: "Lexend", "Rubik", "Helvetica", sans-serif;
 }
 .body {
-  color:var(--text-color);
+  color:var(--text-color, #473c3c);
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -118,7 +118,7 @@ body {
   width: 50px;
   transition: 0.3s ease-out;
   border-radius: 50px;
-  color: var(--logo-color);
+  color: var(--logo-color, #c58b8b);
 }
 #logo:hover {
   -webkit-filter: contrast(200%);

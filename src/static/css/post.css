@@ -14,6 +14,9 @@
   margin: 0.5em;
   list-style: none;
 }
+.gallerylist li:hover{
+  filter:blur(1px);
+}
 .post-thumbnails {
   -o-object-fit: cover;
   object-fit: cover;
@@ -87,12 +90,13 @@ img.post-thumbnails {
   text-transform: lowercase;
 }
 p.vtube-desc{
+  margin-top:15px;
   font-size:1rem;
   text-align: left;
 }
 #artist,
 #rigger {
-  padding-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 .video {
   display: inline-block;
@@ -132,6 +136,7 @@ p.vtube-desc{
   border-radius: 5px;
 }
 section.links{
+  margin-top:5px;
   display:block;
 }
 .social-links .fa-brands,.social-links .fa-sharp{
