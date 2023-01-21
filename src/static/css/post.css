@@ -43,7 +43,7 @@ img.post-thumbnails {
 }
 .post-left {
   display: flex;
-  flex: 10 1 500px;
+  flex: 10 1 600px;
   position: relative;
   overflow-y: scroll;
   margin: auto;
@@ -53,17 +53,18 @@ img.post-thumbnails {
   max-width:100%;
   padding-block: 2rem;
   padding-inline: 1.5rem;
-  flex: 1 5 400px;
+  flex: 1 1 300px;
   overflow-y: scroll;
   border-radius: 4px;
-  background: #f3edeb;
-  box-shadow:  5px 5px 13px #c0bbba,
-               -5px -5px 13px #ffffff;
+  background: #f3eded;
+  box-shadow:  8px 8px 16px #d6d1d1,
+               -8px -8px 16px #ffffff;
 }
-.post-right h1 {
-  margin: 0 0 15px;
-  padding: 5px 25px;
+.vtuber {
+  width:100%;
+  margin: 0 0 25px;
   font-size: 2rem;
+  font-weight:bold;
   letter-spacing: 1px;
   border-radius: 4px;
   background: #f3edeb;
@@ -83,6 +84,11 @@ img.post-thumbnails {
   display:inline;
   font-size:1.5rem;
   letter-spacing: 0px;
+  text-transform: lowercase;
+}
+p.vtube-desc{
+  font-size:1rem;
+  text-align: left;
 }
 #artist,
 #rigger {
@@ -126,6 +132,7 @@ img.post-thumbnails {
   border-radius: 5px;
 }
 section.links{
+  display:block;
 }
 .social-links .fa-brands,.social-links .fa-sharp{
   font-size:1.3rem;
@@ -136,6 +143,12 @@ section.links{
   background: #f3edeb;
   box-shadow:  5px 5px 10px #d1ccca,
                -5px -5px 10px #ffffff;
+}
+.social-links .fa-brands:hover,.social-links .fa-sharp:hover{
+  border-radius: 4px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  5px 5px 11px #bebebe,
+              -5px -5px 11px #ffffff;
 }
 @media screen and (max-width: 900px) {
   .gallerylist {

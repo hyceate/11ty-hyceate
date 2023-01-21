@@ -8,10 +8,11 @@ permalink: "posts/{{ title | slugify }}/index.html"
   <article id="post-content">
     <section class="post-left">{{ content | safe }}</section>
     <aside class="post-right">
-      <h1>{{ vtubername }}</h1>
+      <div class="vtuber">{{ vtubername }}</div>
       {% if artist %}
       <section id="artist">
         <div class="artist-title">Artist: <p>{{artist}}</p></div>
+        {% if atwitter or awebsite or rtwitter or rrigger %}
         <section class="links">
           <ul class="social-links">
             {% if atwitter %}
@@ -19,13 +20,13 @@ permalink: "posts/{{ title | slugify }}/index.html"
               <a
                 href="https://twitter.com/{{ atwitter | safe}}"
                 alt="{{artist}}'s twitter"
-                ><i class="fa-brands fa-twitter"></i>
+                ><i class="fa-brands fa-twitter transition"></i>
               </a>
             </li>
             {% endif %} {%if awebsite%}
             <li>
               <a href="{{ awebsite }}" alt="{{artist}}'s website"
-                ><i class="fa-sharp fa-solid fa-globe"></i
+                ><i class="fa-sharp fa-solid fa-globe transition"></i
               ></a>
             </li>
             {%endif%}
@@ -37,7 +38,7 @@ permalink: "posts/{{ title | slugify }}/index.html"
         <div class="rigger-title">Rigger: <p>{{rigger}}</p></div>
         <section class="links">
           <ul class="social-links">
-            {% if atwitter %}
+            {% if rtwitter %}
             <li>
               <a
                 href="https://twitter.com/{{ rtwitter | safe}}"
@@ -52,10 +53,11 @@ permalink: "posts/{{ title | slugify }}/index.html"
             </li>
             {%endif%}
           </ul>
+          {%endif%}
         </section>
       </section>
       {% endif %}
-      <p>{{ description | safe }}</p>
+      <p class="vtube-desc">{{ description | safe }}</p>
     </aside>
   </article>
 </section>

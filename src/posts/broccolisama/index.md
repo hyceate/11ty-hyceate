@@ -1,9 +1,11 @@
 ---
 title: Broccolisama
-description: Broccolilord
 vtubername: Broccolisama
+description: Sadly not a real broccoli just a fixer named Broccoli (Deepest Lore)
 rigger: Hyceate
+rtwitter: hyceate
 artist: linkaimane
+atwitter: linkaimane
 layout: post
 permalink: /posts/{{title | slugify }}/
 thumbnail: icon.jpg

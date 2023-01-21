@@ -28,7 +28,7 @@ collections:
           config:
             multiple: false
       - { label: "Title", name: "title", widget: "string", required: false }
-      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "markdown", required: false }
       - { label: "Vtuber", name: "vtubername", widget: "string" }
       - { label: "Rigger", name: "rigger", widget: "string", required: false }
       - { label: "Rigger Twitter", name: "rtwitter", widget: "string", required: false }
@@ -75,8 +75,8 @@ collections:
         name: "homepage"
         file: "src/index.md"
         fields:
-          - { label: "Layout", name: "layout", widget: "hidden", default: "base"}
-          - { label: "Tag", name: "tag", widget: "hidden", default: "page"}
+          - { label: "Layout", name: "layout", widget: "hidden", default: "base" }
+          - { label: "Tag", name: "tag", widget: "hidden", default: "page" }
           - { label: "Title", name: "title", widget: string }
           - { label: "Description", name: "description", widget: markdown, required: false }
           - { label: "Body", name: "body", widget: "markdown", required: false}
