@@ -182,3 +182,13 @@ a[data-current="current item"] {
   line-height: 1.6;
   text-align: left;
 }
+
+@media screen and (max-width:900px) {
+  header{
+    overflow:hidden;
+  }
+  .landing h1{
+    font-size:5rem;
+    left:0;
+  }
+}

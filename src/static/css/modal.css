@@ -11,9 +11,9 @@
   width: 100%; /* Full width */
   min-height: 100%; /* Full height */
   padding-top: -var(--header-height); /* Location of the box */
-  background-color: rgba(105, 102, 102, 0.637);
-  -webkit-backdrop-filter: blur(5px);  
-  backdrop-filter: blur(5px);
+  background-color: rgba(179, 173, 173, 0.637);
+  -webkit-backdrop-filter: blur(1px);  
+  backdrop-filter: blur(1px);
 }
 .modal.hide-modal {
   opacity: 0;
@@ -34,8 +34,8 @@
   max-height: 100%;
   margin: 0px auto;
   padding: 20px;
-  border-radius: 16px;
-  background: linear-gradient(90deg, var(--background-color), #fffefb);
+  border-radius: 5px;
+  background: linear-gradient(145deg, #f8f7f3, #f1f0f0);
 }
 button {
   margin: -39px 7px;
@@ -53,7 +53,7 @@ button {
   height:35px;
   border-radius: 5px;
   background: linear-gradient(145deg, #fffefb, #dbd5d4);
-  box-shadow: 2px 2px 5px #e9e4e2, -1px -1px 5px #fdf6f4
+  box-shadow: 1px 1px 2px #e9e4e2, -1px -1px 2px #fdf6f4
 }
 .closeButton:after{
   content: "\00d7";
@@ -72,4 +72,13 @@ button {
   background: linear-gradient(145deg, #fffefb, #dbd5d4);
   box-shadow: inset 3px 3px 6px #e9e4e2,
               inset -3px -3px 6px #fdf6f4;
+}
+
+@media screen and (max-width:900px) {
+  .modal-content{
+    width:100%;
+  }
+  button{
+    margin:-39px -30px;
+  }
 }

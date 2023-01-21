@@ -11,8 +11,7 @@ permalink: "posts/{{ title | slugify }}/index.html"
       <h1>{{ vtubername }}</h1>
       {% if artist %}
       <section id="artist">
-        <h3 class="artist-title">Artist</h3>
-        <p>{{artist}}</p>
+        <div class="artist-title">Artist: <p>{{artist}}</p></div>
         <section class="links">
           <ul class="social-links">
             {% if atwitter %}
@@ -35,8 +34,7 @@ permalink: "posts/{{ title | slugify }}/index.html"
       </section>
       {% endif %} {% if rigger %}
       <section id="rigger">
-        <h3 class="rigger-title">Rigger</h3>
-        <p>{{rigger}}</p>
+        <div class="rigger-title">Rigger: <p>{{rigger}}</p></div>
         <section class="links">
           <ul class="social-links">
             {% if atwitter %}
