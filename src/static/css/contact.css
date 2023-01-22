@@ -52,6 +52,7 @@ button[type="submit"]{
                  -6px -6px 12px #ffffff;
 }
 button[type="submit"]:hover{
+    cursor:pointer;
     background: linear-gradient(145deg, #fffefb, #f5e1dd);
     box-shadow:  inset 6px 6px 12px #f3d2c2,
                  inset -6px -6px 12px #ffffff;
