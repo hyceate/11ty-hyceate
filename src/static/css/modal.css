@@ -67,9 +67,7 @@ button.closeButton {
   box-shadow: inset 3px 3px 6px #e9e4e2,
               inset -3px -3px 6px #fdf6f4;
 }
-.transition{
-  transition: all 0.3s ease-in-out;
-}
+
 @media screen and (max-width:900px) {
   .modal-content{
     width:90vw;

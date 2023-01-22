@@ -13,10 +13,12 @@
   flex: 1 0 20%;
   margin: 0.5em;
   list-style: none;
+  transition: all 0.3s ease-in-out;
 }
 .gallerylist li:hover{
+  transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  box-shadow:2px 2px 5px rgb(56, 42, 42), 1px 1px 12px white;
+  box-shadow:1px 1px 15px rgb(199, 147, 147), 1px 1px 15px rgb(255, 233, 233);
 }
 .post-thumbnails {
   -o-object-fit: cover;
@@ -142,6 +144,7 @@ section.links{
   display:block;
 }
 .social-links .fa-brands,.social-links .fa-sharp{
+  transition: all 0.3s ease-in-out;
   font-size:1.3rem;
   padding:5px;
   border-radius: 5px;
@@ -152,6 +155,7 @@ section.links{
                -5px -5px 10px #ffffff;
 }
 .social-links .fa-brands:hover,.social-links .fa-sharp:hover{
+  transition: all 0.3s ease-in-out;
   border-radius: 4px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow:  5px 5px 11px #bebebe,

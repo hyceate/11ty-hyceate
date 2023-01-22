@@ -20,13 +20,13 @@ permalink: "posts/{{ title | slugify }}/index.html"
               <a
                 href="https://twitter.com/{{ atwitter | safe}}"
                 alt="{{artist}}'s twitter"
-                ><i class="fa-brands fa-twitter transition"></i>
+                ><i class="fa-brands fa-twitter"></i>
               </a>
             </li>
             {% endif %} {%if awebsite%}
             <li>
               <a href="{{ awebsite }}" alt="{{artist}}'s website"
-                ><i class="fa-sharp fa-solid fa-globe transition"></i
+                ><i class="fa-sharp fa-solid fa-globe"></i
               ></a>
             </li>
             {%endif%}
