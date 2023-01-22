@@ -1,0 +1,58 @@
+#contact{
+    width:100%;
+    min-width:20vw;
+    max-width:60vw;
+    margin:15px auto 0;
+    text-align: left;
+    display:block;
+}
+fieldset{
+    padding-inline: 0px;
+    margin-bottom:20px;
+    border:none;
+}
+label, textarea{
+    display:block;
+}
+label{
+    font-weight: bold;
+}
+textarea{
+    margin-top:10px;
+    width:100%;
+    min-width:20vw;
+    max-width:60vw;
+    height:100%;
+    padding:10px;
+    min-height:20vh;
+    font-size:1rem;
+    border:1px solid #fae2e6;
+}   
+input{
+    margin-top:10px;
+    display:block;
+    width:100%;
+    padding:10px;
+    font-size:1rem;
+    border:1px solid #fae2e6;
+}
+button[type="submit"]{
+    margin-top: 15px;
+    width:100%;
+    padding:10px;
+    font-size:20px;
+    color:#493f3f;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Rubik", sans-serif;
+    border:1px solid #fae2e6;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #fffefb, #f5e1dd);
+    box-shadow:  6px 6px 12px #f3d2c2,
+                 -6px -6px 12px #ffffff;
+}
+button[type="submit"]:hover{
+    background: linear-gradient(145deg, #fffefb, #f5e1dd);
+    box-shadow:  inset 6px 6px 12px #f3d2c2,
+                 inset -6px -6px 12px #ffffff;
+}

@@ -38,7 +38,7 @@
   border-radius: 5px;
   background: linear-gradient(145deg, #f8f7f3, #f1f0f0);
 }
-button {
+button.closeButton {
   margin: -39px 7px;
   padding: 0px;
   border: 0;
@@ -74,7 +74,7 @@ button {
   .modal-content{
     width:90vw;
   }
-  button{
+  button.closeButton{
     margin:-39px -30px;
   }
 }

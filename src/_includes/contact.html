@@ -1,0 +1,47 @@
+---
+layout: base
+eleventyComputed:
+  title: "{{title | safe}}"
+  description: "{{ description | safe}}"
+  slug: "{{slug}}"
+eleventyNavigation:
+  key: Contact Me
+  order: 5
+---
+{% metagen metadata %}
+{% block content %}
+<section class="page">
+    <h1>{{ title | safe }}</h1>
+    {{ content | safe }}
+</section>
+<form id="contact"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSe041kNaiiKghNRWl1fY-l4Od3RFemdjmPf0UQE8uBlzz5u0Q/formResponse"
+  method="POST"
+  enctype="multipart/form-data"
+>
+<fieldset>
+  <label for="name">
+    Preferred Name
+  </label>
+  <input id="name" name="entry.2063991218" type="text" aria-label="Name" required="true">
+</fieldset>
+
+<fieldset>
+  <label for="email">
+    Your email
+  </label>
+  <input type="email" name="entry.293503584" aria-label="Your email" required="true">
+</fieldset>
+<fieldset>
+  <label for="subject">Subject (optional)</label>
+  <input id="subject" name="entry.1871228663" aria-label="Optional Subject">
+</fieldset>
+<fieldset>
+  <label for="message">
+    Message
+  </label>
+  <textarea id="message" name="entry.1466471588" required="true" aria-label="Message"></textarea>
+</fieldset>
+<button class="transition" type="submit" value="Submit">Submit</button>
+</form>
+{% endblock %}

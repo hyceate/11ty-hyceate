@@ -95,17 +95,14 @@ body {
   text-align: center;
 }
 .landing {
+  width: 100%;
+  height: 80vh;
   display: flex;
   justify-items: center;
   flex-direction: column;
-  align-content: center;
-  width: 100%;
-  height: 100%;
+  justify-content: flex-end;
 }
 .landing h1 {
-  display: flex;
-  margin-top:300px;
-  justify-content: center;
   font-size: 15vw;
   font-family: "Lexend", sans-serif;
   color: rgb(255, 166, 148);
@@ -143,17 +140,12 @@ body {
   padding: 10px 15px;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 4px;
 }
 .navbar a:hover:not([data-current="current item"]){
-  color:white;
-  background: #c58b8b;
+  border-bottom:1px solid black;
 }
 .navbar a:active:not([data-current="current item"]){
-  background: linear-gradient(145deg, #b17d7d, #d39595);
-  color:white;
-  box-shadow: inset 3px 3px 6px #b37e7e,
-  inset -3px -3px 6px #d79898;
+  border-bottom:1px solid black;
 }
 .navbar li,
 .social-links li {
@@ -166,13 +158,12 @@ body {
   margin: 0 0 0 5px;
 }
 a[data-current="current item"] {
-  background-color: var(--logo-color);
-  color: var(--background-color);
-  box-shadow: inset 3px 3px 6px #b37e7e,
-  inset -3px -3px 6px #d79898;
+  border-bottom:1px solid black;
 }
 .page {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   overflow: hidden;
   width: 80%;
