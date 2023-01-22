@@ -12,7 +12,7 @@
 .gallerylist li {
   flex: 1 0 20%;
   margin: 0.5em;
-  min-width:200px;
+  min-width:150px;
   list-style: none;
   transition: all 0.3s ease-in-out;
 }

@@ -1,14 +1,14 @@
 #contact{
     width:100%;
     min-width:20vw;
-    max-width:60vw;
+    max-width:70vw;
     margin:15px auto 0;
     text-align: left;
     display:block;
 }
 fieldset{
     padding-inline: 0px;
-    margin-bottom:20px;
+    margin-bottom:10px;
     border:none;
 }
 label, textarea{
@@ -22,7 +22,7 @@ textarea{
     margin-top:10px;
     width:100%;
     min-width:20vw;
-    max-width:60vw;
+    max-width:70vw;
     height:100%;
     padding:10px;
     min-height:20vh;
@@ -39,7 +39,8 @@ input{
     border:1px solid #fae2e6;
 }
 button[type="submit"]{
-    margin-top: 15px;
+    margin-top:15px;
+    margin-bottom:30px;
     width:100%;
     padding:10px;
     font-size:20px;

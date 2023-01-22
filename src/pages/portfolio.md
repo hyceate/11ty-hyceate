@@ -8,5 +8,5 @@ eleventyNavigation:
   order: 1
   body: Portfolio Gallery
 ---
+Please email or contact me on my various social media. I check my emails regularly. Thank you!
 
-Please email or contact me on my various social media. I check my emails regularly.
