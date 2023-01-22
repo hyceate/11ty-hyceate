@@ -8,11 +8,8 @@ eleventyNavigation:
   body: Terms and Conditions
   order: 2
 ---
-By reading this document, you agree to the following:
-terms and conditions outlined on this page,
-keep in contact with me and provide feedback or acknowledgement that you were sent updates,
-you are of legal age and have enough funds,
-will not file a chargeback or dispute without contacting me first for discussing refunds and/or corrections on project.
+### By reading this document, you agree to the following:  
+terms and conditions outlined on this page, keep in contact with me and provide feedback or acknowledgement that you were sent updates, you are of legal age and have enough funds, will not file a chargeback or dispute without contacting me first for discussing refunds and/or corrections on project.
 
 ### Privacy
 
