@@ -10,7 +10,7 @@ permalink: "posts/{{ title | slugify }}/index.html"
     <aside class="post-right">
       <div class="vtuber">{{ vtubername }}</div>
       {% if vtwitch or vweb or vyoutube or vtwitter or vinstagram %}
-      <section id="vlinks">
+      <section id="vlinks" class="social-links">
         {%if vtwitch%}
         <a href="{{vtwitch}}"><i class="fa-brands fa-twitch"></i></a>
         {%endif%}

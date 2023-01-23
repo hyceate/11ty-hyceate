@@ -144,10 +144,10 @@ p.vtube-desc{
   border: 0;
   border-radius: 5px;
 }
-section.links{
-  margin-top:5px;
-  display:block;
+#vlinks{
+  margin-bottom:35px;
 }
+
 .social-links .fa-brands,.social-links .fa-sharp{
   transition: all 0.3s ease-in-out;
   font-size:1.3rem;
