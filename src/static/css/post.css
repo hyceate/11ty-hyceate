@@ -59,7 +59,6 @@ img.post-thumbnails {
 }
 .post-right {
   max-width:100%;
-  max-height:50vh;
   padding-block: 2rem;
   padding-inline: 1.5rem;
   flex: 1 1 300px;
@@ -96,8 +95,10 @@ img.post-thumbnails {
 }
 p.vtube-desc{
   margin-top:15px;
-  font-size:1rem;
+  font-size:1.1rem;
   text-align: left;
+  max-height:200px;
+  overflow-y:scroll;
 }
 #artist,
 #rigger {
