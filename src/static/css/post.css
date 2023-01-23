@@ -82,20 +82,20 @@ img.post-thumbnails {
   margin-block: 0px;
   margin-inline:5px;
   display:inline-block;
-  font-size:1.5rem;
+  font-size:1.7rem;
 }
 .artist-title,
 .rigger-title {
   margin-block: 0px;
   padding-block: 0px;
   display:inline;
-  font-size:1.5rem;
+  font-size:1.7rem;
   letter-spacing: 0px;
   text-transform: lowercase;
 }
 p.vtube-desc{
   margin-top:15px;
-  font-size:1.1rem;
+  font-size:1.3rem;
   text-align: left;
   max-height:200px;
   overflow-y:scroll;
@@ -148,10 +148,9 @@ p.vtube-desc{
 #vlinks{
   margin-bottom:35px;
 }
-
 .social-links .fa-brands,.social-links .fa-sharp{
   transition: all 0.3s ease-in-out;
-  font-size:1.3rem;
+  font-size:2rem;
   padding:5px;
   border-radius: 5px;
   margin-right:5px;
