@@ -8,5 +8,6 @@ eleventyNavigation:
   order: 1
   body: Portfolio Gallery
 ---
-Please email or contact me on my various social media. I check my emails regularly. Thank you!
+
+This is a gallery of various levels of movement rigging. For project inquiries, please contact me on social media or email me at [hyceate+co@gmail.com](mailto:hyceate+co@gmail.com).
 
