@@ -111,6 +111,10 @@ p.vtube-desc{
   max-width: 100%;
   margin: 0 auto;
   vertical-align: top;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  5px 5px 11px #bebebe,
+              -5px -5px 11px #ffffff;
 }
 .aspect-ratio,
 .eleventy-plugin-youtube-embed {
