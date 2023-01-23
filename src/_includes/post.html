@@ -9,6 +9,26 @@ permalink: "posts/{{ title | slugify }}/index.html"
     <section class="post-left">{{ content | safe }}</section>
     <aside class="post-right">
       <div class="vtuber">{{ vtubername }}</div>
+      {% if vtwitch or vweb or vyoutube or vtwitter or vinstagram %}
+      <section id="vlinks">
+        {%if vtwitch%}
+        <a href="{{vtwitch}}"><i class="fa-brands fa-twitch"></i></a>
+        {%endif%}
+        {%if vweb%}
+        <a href="{{vweb}}"><i class="fa-solid fa-globe"></i></a>
+        {%endif%}
+        {%if vyoutube%}
+        <a href="{{vyoutube}}"><i class="fa-brands fa-youtube"></i></a>
+        {%endif%}
+        {%if vtwitter%}
+        <a href="{{vtwitter}}"><i class="fa-brands fa-twitter"></i></a>
+        {%endif%}
+        {%if vinstagram%}
+        <a href="{{vinstagram}}"><i class="fa-brands fa-instagram"></i></a>
+        {%endif%}
+      </section>
+      {% endif %}
+      <div class="vtuber-links"></div>
       {% if artist %}
       <section id="artist">
         <div class="artist-title">Artist: <p>{{artist}}</p></div>

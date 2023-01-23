@@ -1,6 +1,8 @@
 ---
 title: Broccolisama
 vtubername: Broccolisama
+vtwitch: https://www.twitch.tv/broccolisama
+vtwitter: https://twitter.com/BroccoliVT
 description: Sadly not a real broccoli just a fixer named Broccoli (Deepest Lore)
 rigger: Hyceate
 rtwitter: hyceate
