@@ -1,3 +1,6 @@
+#toBe{
+  padding-inline:5em;
+}
 .gallerylist {
   justify-items: center;
   -webkit-box-pack: justify;
@@ -150,7 +153,7 @@ p.vtube-desc{
   margin-bottom:35px;
   gap:5px;
 }
-.social-links .fa-brands,.social-links .fa-sharp{
+.social-links .svg-inline--fa{
   transition: all 0.3s ease-in-out;
   font-size:2rem;
   padding:5px;
@@ -161,7 +164,7 @@ p.vtube-desc{
   box-shadow:  5px 5px 10px #d1ccca,
                -5px -5px 10px #ffffff;
 }
-.social-links .fa-brands:hover,.social-links .fa-sharp:hover{
+.social-links .svg-inline--fa:hover{
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
@@ -231,7 +234,7 @@ p.vtube-desc{
     display: flex;
     height: 200px;
   }
-  .social-links .fa-brands,.social-links .fa-sharp{
+  .social-links .svg-inline--fa{
     font-size:1.2rem;
   }
   .post-left {

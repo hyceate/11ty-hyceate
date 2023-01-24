@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded",function(){
       }
     });
   }
+  function clickHide() {
+    // remove the content from the section element
+    modal.classList.remove("show-modal");
+    modal.classList.add("hide-modal");
+    var content = modal.querySelector(".inserted");
+    modal.addEventListener("transitionend", function() {
+      if(event.target.classList.contains("hide-modal")){
+      modal.style.display = "none";
+      content.innerHTML="";
+      }
+    });
+  }
   // When the user clicks on a modal link, fetch the page's HTML content and show it in the modal
   for (var i = 0; i < modalLinks.length; i++) {
     modalLinks[i].onclick = function(event) {
@@ -36,8 +48,8 @@ document.addEventListener("DOMContentLoaded",function(){
         .catch(error => console.log(error));  // log any errors that occur
     }
   }
-  // When the user clicks on <span> (x), close the modal
-  closeButton.onclick = hideModal;
+  // When the user clicks on closeButton (x), close the modal
+  closeButton.onclick = clickHide;
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target === modal) {
