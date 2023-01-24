@@ -15,17 +15,13 @@ description: "{{ description | safe }}"
       <section id="vlinks" class="social-links">
         {%if vtwitch%}
         <a href="{{vtwitch}}"><i class="fa-brands fa-twitch"></i></a>
-        {%endif%}
-        {%if vweb%}
-        <a href="{{vweb}}"><i class="fa-solid fa-globe"></i></a>
-        {%endif%}
-        {%if vyoutube%}
+        {%endif%} {%if vweb%}
+        <a href="{{vweb}}"><i class="fa-solid fa-circle-user"></i></a>
+        {%endif%} {%if vyoutube%}
         <a href="{{vyoutube}}"><i class="fa-brands fa-youtube"></i></a>
-        {%endif%}
-        {%if vtwitter%}
+        {%endif%} {%if vtwitter%}
         <a href="{{vtwitter}}"><i class="fa-brands fa-twitter"></i></a>
-        {%endif%}
-        {%if vinstagram%}
+        {%endif%} {%if vinstagram%}
         <a href="{{vinstagram}}"><i class="fa-brands fa-instagram"></i></a>
         {%endif%}
       </section>
@@ -33,7 +29,10 @@ description: "{{ description | safe }}"
       <div class="vtuber-links"></div>
       {% if artist %}
       <section id="artist">
-        <div class="artist-title">Artist: <p>{{artist}}</p></div>
+        <div class="artist-title">
+          Artist:
+          <p>{{artist}}</p>
+        </div>
         {% if atwitter or awebsite or rtwitter or rrigger %}
         <section class="links">
           <ul class="social-links">
@@ -48,7 +47,7 @@ description: "{{ description | safe }}"
             {% endif %} {%if awebsite%}
             <li>
               <a href="{{ awebsite }}" alt="{{artist}}'s website"
-                ><i class="fa-sharp fa-solid fa-globe"></i
+                ><i class="fa-solid fa-circle-user"></i
               ></a>
             </li>
             {%endif%}
@@ -57,7 +56,10 @@ description: "{{ description | safe }}"
       </section>
       {% endif %} {% if rigger %}
       <section id="rigger">
-        <div class="rigger-title">Rigger: <p>{{rigger}}</p></div>
+        <div class="rigger-title">
+          Rigger:
+          <p>{{rigger}}</p>
+        </div>
         <section class="links">
           <ul class="social-links">
             {% if rtwitter %}
@@ -65,12 +67,13 @@ description: "{{ description | safe }}"
               <a
                 href="https://twitter.com/{{ rtwitter | safe}}"
                 alt="{{rigger}}'s twitter"
-                ><i class="fa-brands fa-twitter"></i></a>
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
             </li>
             {% endif %} {%if rwebsite%}
             <li>
               <a href="{{ rwebsite }}" alt="{{rigger}}'s website"
-                ><i class="fa-sharp fa-solid fa-globe"></i
+                ><i class="fa-solid fa-circle-user"></i
               ></a>
             </li>
             {%endif%}
