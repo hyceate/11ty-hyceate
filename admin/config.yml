@@ -32,7 +32,8 @@ collections:
       - { label: "Vtuber", name: "vtubername", widget: "string" }
       - { label: "Vtuber Twitch", name: "vtwitch", widget:"string", required: false }
       - { label: "Vtuber Website", name: "vweb", widget:"string", required: false }
-      - { label: "Vtuber Youtube", name: "vyoutube", widget:"string", required: false }
+      - { label: "Vtuber twitter", name: "vtwitter", widget:"string", required: false }
+      - { label: "Vtuber instagram", name: "vinstagram", widget:"string", required: false }
       - { label: "Rigger", name: "rigger", widget: "string", required: false }
       - { label: "Rigger Twitter", name: "rtwitter", widget: "string", required: false }
       - { label: "Rigger Website", name: "rwebsite", widget: "string", required: false }

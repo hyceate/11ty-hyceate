@@ -2,14 +2,16 @@
 layout: base
 eleventyComputed:
   title: "{{ title | safe }}"
+  subtitle: "{{ subtitle | safe }}"
   description: "{{ description | safe }}"
 ---
 {% metagen metadata %}
 {% block content %}
-<section class="landing">
-  <article>
+<section class="landing col-12">
+  <section class="landing-title">
   <h1>{{ title }}</h1>
-  </article>
+  <h2>{{ subtitle }}</h2>
   </section>
-  <article class="home-content">{{ content | safe }}</article>
+  <img src="/static/img/gif_09.jpg">
+  </section>
 {% endblock %}

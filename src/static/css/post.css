@@ -12,7 +12,7 @@
 .gallerylist li {
   flex: 1 0 20%;
   margin: 0.5em;
-  min-width:150px;
+  min-width:180px;
   list-style: none;
   transition: all 0.3s ease-in-out;
 }
@@ -25,7 +25,7 @@
   -o-object-fit: cover;
   object-fit: cover;
   max-width: 100%;
-  height: 120px;
+  height: 150px;
   border-radius: 5px;
 }
 img.post-thumbnails {
@@ -95,9 +95,9 @@ img.post-thumbnails {
 }
 p.vtube-desc{
   margin-top:15px;
-  font-size:1.3rem;
+  font-size:1.2rem;
   text-align: left;
-  max-height:40vh;
+  max-height:30vh;
   overflow-y:scroll;
   transition: all 0.3s ease-in-out;
 }
@@ -148,6 +148,7 @@ p.vtube-desc{
 }
 #vlinks{
   margin-bottom:35px;
+  gap:5px;
 }
 .social-links .fa-brands,.social-links .fa-sharp{
   transition: all 0.3s ease-in-out;
@@ -167,16 +168,23 @@ p.vtube-desc{
   box-shadow:  5px 5px 11px #bebebe,
               -5px -5px 11px #ffffff;
 }
-@media screen and (max-width:1800px){
+@media screen and (max-width:1824px){
   p.vtube-desc{
-    max-height:30vh;
+    max-height:20vh;
     transition: all 0.3s ease-in-out;
   }
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:1535px){
   p.vtube-desc{
-    max-height:15vh;
+    max-height:18vh;
     font-size:1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+@media screen and (max-width:1300px){
+  p.vtube-desc{
+    max-height:10vh;
+    font-size:1rem;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -204,5 +212,32 @@ p.vtube-desc{
   p.vtube-desc {
     max-height:100vh;
     font-size:1rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .post-thumbnails {
+    width: 100%;
+    border-radius: 5px;
+  }
+  img.post-thumbnails {
+    display: flex;
+    height: 200px;
+  }
+  .social-links .fa-brands,.social-links .fa-sharp{
+    font-size:1.2rem;
+  }
+  .post-left {
+    padding:10px;
+  }
+  .post-right{
+    padding:5px;
+  }
+  .vtuber,.post-right p, .artist-title, .rigger-title{
+    font-size:1rem;
+  }
+  p.vtube-desc {
+    max-height:100vh;
+    font-size:.5rem;
   }
 }

@@ -1,7 +1,6 @@
 <script webc:type="render" webc:is="template">
     function() {
       const now = new Date();
-  
-      return `&copy; ${now.getFullYear()} Hyceate`;
+      return `<div class="footer"> &copy; ${now.getFullYear()} Hyceate</div>`;
     }
   </script>
