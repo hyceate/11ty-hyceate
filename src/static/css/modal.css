@@ -31,15 +31,16 @@
 /* Modal Content */
 .modal-content {
   overflow-y: auto;
-  width: 80%;
-  max-height: 80vh;
+  width: 90%;
+  max-height: 85vh;
+  height:100%;
   margin: 0px auto;
   padding: 20px;
   border-radius: 5px;
   background: linear-gradient(145deg, #f8f7f3, #f1f0f0);
 }
 button.closeButton {
-  margin: -39px 7px;
+  margin: -39px -60px;
   padding: 0px;
   border: 0;
 }
@@ -70,9 +71,9 @@ button.closeButton {
 
 @media screen and (max-width:900px) {
   .modal-content{
-    width:90vw;
+    width:90rem;
   }
   button.closeButton{
-    margin:-39px -30px;
+    margin: -40px -30px;
   }
 }
