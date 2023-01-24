@@ -101,7 +101,7 @@ p.vtube-desc{
   margin-top:15px;
   font-size:.9rem;
   text-align: left;
-  max-height:40vh;
+  max-height:24em;
   overflow-y:scroll;
   transition: all 0.3s ease-in-out;
 }
@@ -171,4 +171,35 @@ p.vtube-desc{
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow:  5px 5px 11px #bebebe,
               -5px -5px 11px #ffffff;
+}
+@media screen and (max-width:160em){
+  p.vtube-desc{
+    font-size:1.2rem;
+    max-height:40em;
+    overflow-y:scroll;
+  }
+}
+@media screen and (max-width:120em){
+  p.vtube-desc{
+    font-size:1rem;
+    max-height:23.9em;
+    overflow-y:scroll;
+  }
+}
+@media screen and (max-width:90em){
+  .post-left{
+    flex: 10 1 900px;
+  }
+  p.vtube-desc{
+    font-size:.9rem;
+    max-height:10em;
+    overflow-y:scroll;
+  }
+}
+@media screen and (max-width:64em){
+  p.vtube-desc{
+    font-size:.9rem;
+    max-height:100%;
+    overflow-y:scroll;
+  }
 }

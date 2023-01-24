@@ -20,19 +20,19 @@ eleventyComputed:
     {% metagen title=title or metadata.title, desc=desc or metadata.desc,
     url=url + page.url %}
     <script src="https://kit.fontawesome.com/f7a8459064.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/static/css/grid.css" />
+{#     <link rel="stylesheet" href="/static/css/grid.css" />
     <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="stylesheet" href="/static/css/modal.css" />
     <link rel="stylesheet" href="/static/css/post.css" />
-    <link rel="stylesheet" href="/static/css/contact.css" />
-{#     {% set css %} {% include "src/static/css/main.css" %} {% include
+    <link rel="stylesheet" href="/static/css/contact.css" /> #}
+    {% set css %} {% include "src/static/css/main.css" %} {% include
     "src/static/css/grid.css" %} {% include
       "src/static/css/modal.css" %} {% include
         "src/static/css/post.css" %}{% include
           "src/static/css/contact.css" %}{% endset %}
     <style>
       {{ css | cssmin | safe }}
-    </style> #}
+    </style>
   </head>
   <body class="col-12">
     {% include "src/_includes/_partials/header.html" %}
