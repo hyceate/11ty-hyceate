@@ -1,4 +1,5 @@
 ---
+description: "{{description | safe}}"
 eleventyComputed:
   url: "https://hyceate.pages.dev"
   summary: "{{page.description}}"
@@ -27,12 +28,14 @@ eleventyComputed:
     <link rel="stylesheet" href="/static/css/modal.css" />
     <link rel="stylesheet" href="/static/css/post.css" />
     <link rel="stylesheet" href="/static/css/contact.css" />
-    {# {% set css %} {% include "src/static/css/main.css" %} {% include
-    "src/static/css/grid.css" %} {% endset %}
+{#     {% set css %} {% include "src/static/css/main.css" %} {% include
+    "src/static/css/grid.css" %} {% include
+      "src/static/css/modal.css" %} {% include
+        "src/static/css/post.css" %}{% include
+          "src/static/css/contact.css" %}{% endset %}
     <style>
       {{ css | cssmin | safe }}
-    </style>
-    #}
+    </style> #}
   </head>
   <body class="col-12">
     {% include "src/_includes/_partials/header.html" %}

@@ -13,6 +13,9 @@ html, body {
   height:100%;
   margin:0;
   overflow-x: hidden;
+  font-display:swap;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 a {
   color: rgb(124, 106, 109);
@@ -81,6 +84,7 @@ body {
   justify-content: center;
 }
 .landing-title{
+  font-family: "Rubik", sans-serif;
   z-index:3;
 }
 .landing-title h1, .landing-title h2{
@@ -91,7 +95,6 @@ body {
 }
 .landing-title h1{
   font-size: 13rem;
-  font-family: "Rubik", sans-serif;
   color: #ffa694;
   text-transform: lowercase;
   letter-spacing: 0px;
@@ -152,7 +155,6 @@ body {
   display: inline-flex;
   font-size: 1rem;
   font-weight: 600;
-  font-family: "Rubik", "Helvetica", sans-serif;
   list-style: none;
 }
 .social-links {

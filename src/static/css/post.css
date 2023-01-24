@@ -188,6 +188,13 @@ p.vtube-desc{
     transition: all 0.3s ease-in-out;
   }
 }
+@media screen and (max-width:1173px){
+  p.vtube-desc{
+    max-height:100vh;
+    font-size:1rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
 @media screen and (max-width: 900px) {
   .gallerylist {
     justify-content: space-between;
@@ -207,7 +214,7 @@ p.vtube-desc{
     padding:10px;
   }
   .vtuber,.post-right p, .artist-title, .rigger-title{
-    font-size:1.3rem;
+    font-size:1.2rem;
   }
   p.vtube-desc {
     max-height:100vh;
@@ -215,7 +222,7 @@ p.vtube-desc{
   }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 17.5em) {
   .post-thumbnails {
     width: 100%;
     border-radius: 5px;

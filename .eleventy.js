@@ -53,6 +53,7 @@ module.exports = function(eleventyConfig) {
 	//Passthroughs
 	eleventyConfig.addPassthroughCopy("src/static");
 	eleventyConfig.addPassthroughCopy("admin");
+	eleventyConfig.addPassthroughCopy("src/_redirects", "/");
 	// Let Eleventy transform HTML files 
 	// So that we can use .html
 	return {
