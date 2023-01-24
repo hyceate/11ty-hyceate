@@ -186,6 +186,7 @@ p.vtube-desc{
   }
 }
 @media screen and (max-width:90em){
+  .post-left{flex: 10 1 90%;}
   p.vtube-desc{
     font-size:.8rem;
   }
