@@ -83,6 +83,7 @@ img.post-thumbnails {
                -5px -5px 10px #ffffff;
 }
 .post-right p {
+  margin-left:10px;
   display:inline-block;
 }
 .artist-title,
@@ -103,7 +104,7 @@ img.post-thumbnails {
 }
 p.vtube-desc{
   margin-top:15px;
-  font-size:.6rem;
+  font-size:.5rem;
   text-align: left;
   transition: all 0.3s ease-in-out;
 }
@@ -181,8 +182,11 @@ p.vtube-desc{
   }
 }
 @media screen and (max-width:120em){
+  .post-right {
+    max-height:64vh;
+  }
   p.vtube-desc{
-    font-size:1rem;
+    font-size:.9rem;
   }
 }
 @media screen and (max-width:90em){

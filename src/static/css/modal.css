@@ -40,15 +40,15 @@
   background: linear-gradient(145deg, #f8f7f3, #f1f0f0);
 }
 button.closeButton {
-  margin: -14px 35px;
+  position: absolute;
+  z-index: 3;
+  right: 10.2%;
+  margin-top: -14px;
   padding: 0px;
   border: 0;
 }
 /* The Close Button */
 .closeButton {
-  position: absolute;
-  z-index: 3;
-  right: 8.5%;
   font-size:2rem;
   color: #e7a9a7;
   width:35px;
@@ -68,10 +68,9 @@ button.closeButton {
   box-shadow: inset 3px 3px 6px #e9e4e2,
               inset -3px -3px 6px #fdf6f4;
 }
-
 @media screen and (max-width:900px) {
   .modal-content{
-    width:23rem;
+    width: 90vw;
   }
   button.closeButton{
     margin: -20px -30px;
