@@ -99,7 +99,7 @@ img.post-thumbnails {
   background-color:#d3928c;
   color:white;
   margin-block: 10px;
-  padding:10px;
+  padding:7px;
   display:inline;
   letter-spacing: 0px;
   text-transform: lowercase;
@@ -211,11 +211,14 @@ p.vtube-desc{
   #toBe{
     padding-inline: .4em;
   }
+  #post-content>.post-right{
+    padding-inline: 1rem;
+  }
   .post-left{
     flex: 10 1 100%;
   }
   .vtuber, .artist-title, .rigger-title{
-    font-size:1rem;
+    font-size:.9rem;
   }
   p.vtube-desc{
     font-size:.9rem;
