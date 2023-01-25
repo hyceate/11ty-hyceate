@@ -195,7 +195,7 @@ p.vtube-desc{
 }
 @media screen and (max-width:120em){
   #toBe #post-content .post-right{
-    max-height:64vh;
+    max-height:43rem;
   }
   p.vtube-desc{
     font-size:.9rem;
@@ -208,6 +208,9 @@ p.vtube-desc{
   }
 }
 @media screen and (max-width:64em){
+  #toBe{
+    padding-inline: .4em;
+  }
   .post-left{
     flex: 10 1 100%;
   }
