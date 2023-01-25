@@ -13,7 +13,7 @@ eleventyComputed:
       ><img
         class="post-thumbnails"
         src="{{post.url}}{{post.data.thumbnail | url | safe}}"
-        alt="{{post.title}}"
+        alt="{{post.title}}" loading="lazy"
       /></a
     >
   </li>
