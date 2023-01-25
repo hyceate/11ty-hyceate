@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&family=Rubik&family=Lexend&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Rubik&family=Lexend&display=swap");
 :root {
   --background-color: #f3edeb;
   --logo-color: #c58b8b;
@@ -84,7 +84,7 @@ body {
   justify-content: center;
 }
 .landing-title{
-  font-family: "Rubik", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   z-index:3;
 }
 .landing-title h1, .landing-title h2{
@@ -98,14 +98,14 @@ body {
   color: #ffa694;
   text-transform: lowercase;
   letter-spacing: 0px;
-  font-weight: lighter;
+  font-weight: 500;
 }
 .landing-title h2{
   color:#ffa694;
   font-size:1.5rem;
   letter-spacing: .12rem;
   cursor:default;
-  font-weight: lighter;
+  font-weight: light;
 }
 .hero-image{
   max-width: 100%;
