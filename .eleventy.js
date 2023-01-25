@@ -8,6 +8,7 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const metagen = require('eleventy-plugin-metagen');
 const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
@@ -16,9 +17,12 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(pluginWebc, {components: "src/_components/**/*.webc",});
-	eleventyConfig.addPlugin(embedYouTube, {
-		modestBranding: true
-		});
+	eleventyConfig.addPlugin(embedYouTube, {modestBranding: true});
+	eleventyConfig.addPlugin(sitemap, {
+		sitemap: {
+		  hostname: "https://hyceate.pages.dev",
+		},
+	  });
 	eleventyConfig.addPlugin(metagen);
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
@@ -57,6 +61,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/static");
 	eleventyConfig.addPassthroughCopy("admin");
 	eleventyConfig.addPassthroughCopy("src/_redirects", "/");
+	eleventyConfig.addPassthroughCopy("src/robots.txt", "/");
 	// Let Eleventy transform HTML files 
 	// So that we can use .html
 	return {
