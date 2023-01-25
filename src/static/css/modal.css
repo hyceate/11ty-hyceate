@@ -40,7 +40,7 @@
   background: linear-gradient(145deg, #f8f7f3, #f1f0f0);
 }
 button.closeButton {
-  margin: -39px 10px;
+  margin: -14px 35px;
   padding: 0px;
   border: 0;
 }
@@ -71,9 +71,9 @@ button.closeButton {
 
 @media screen and (max-width:900px) {
   .modal-content{
-    width:90rem;
+    width:23rem;
   }
   button.closeButton{
-    margin: -50px -30px;
+    margin: -20px -30px;
   }
 }
