@@ -61,7 +61,7 @@ img.post-thumbnails {
 }
 #post-content > .post-right {
   max-width:100%;
-  max-height: 70vw;
+  max-height: 33vw;
   padding-block: 1rem;
   padding-inline: 1.5rem;
   margin-top:.56rem;
@@ -86,7 +86,7 @@ img.post-thumbnails {
   padding-block: 7px;
   width: 97.8%;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: clamp(.7rem, 2.5vw, 1.5rem); 
   font-weight:bold;
   letter-spacing: 1px;
   border-radius: 4px;
@@ -112,13 +112,7 @@ img.post-thumbnails {
   -5px -5px 10px #ffffff;
 }
 .post-right p, .artist-title, .rigger-title{
-  font-size:1.1rem;
-}
-p.vtube-desc{
-  line-height: 1.6;
-  margin-top:15px;
-  font-size:.5rem;
-  text-align: left;
+  font-size: clamp(.7rem, 2vw, 1rem); 
 }
 #artist,
 #rigger {
@@ -134,8 +128,8 @@ p.vtube-desc{
   vertical-align: top;
   border-radius: 6px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow:  5px 5px 11px #bebebe,
-              -5px -5px 11px #ffffff;
+  box-shadow:  3px 3px 11px #bebebe,
+              -3px -3px 11px #ffffff;
 }
 .aspect-ratio,
 .eleventy-plugin-youtube-embed {
