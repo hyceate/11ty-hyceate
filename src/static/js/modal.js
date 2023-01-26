@@ -1,31 +1,18 @@
 document.addEventListener("DOMContentLoaded",function(){
   // Get the modal link elements
   var modal = document.getElementById("myModal");
+  var modalContentContainer = document.querySelector(".modal-content");
   var modalLinks = document.getElementsByClassName("modal-link");
-  var closeButton = document.querySelector(".closeButton");
-  function hideModal() {
+  var closeButton = document.querySelector("button.closeButton");
+
+  function toggleModal() {
     // remove the content from the section element
-    modal.classList.remove("show-modal");
-    modal.classList.add("hide-modal");
+    modal.classList.toggle("show-modal");
+    modalContentContainer.classList.remove("show-modal");
     var content = modal.querySelector(".inserted");
-    modal.addEventListener("transitionend", function() {
-      if(event.target.classList.contains("hide-modal")){
-      modal.style.visibility = "hidden";
+    if(!modal.classList.contains("show-modal")) {
       content.innerHTML="";
-      }
-    });
-  }
-  function clickHide() {
-    // remove the content from the section element
-    modal.classList.remove("show-modal");
-    modal.classList.add("hide-modal");
-    var content = modal.querySelector(".inserted");
-    modal.addEventListener("transitionend", function() {
-      if(event.target.classList.contains("hide-modal")){
-        modal.style.visibility = "hidden";
-      content.innerHTML="";
-      }
-    });
+   }
   }
   // When the user clicks on a modal link, fetch the page's HTML content and show it in the modal
   for (var i = 0; i < modalLinks.length; i++) {
@@ -33,6 +20,7 @@ document.addEventListener("DOMContentLoaded",function(){
       event.preventDefault();  // prevent the default link behavior
       var url = this.href;  // get the URL to fetch
       var modalContent = modal.querySelector(".inserted");
+      var modalContentContainer = modal.querySelector(".modal-content");
       modalContent.innerHTML = "";
       fetch(url)
       .then(response => response.text())
@@ -41,24 +29,17 @@ document.addEventListener("DOMContentLoaded",function(){
         var doc = parser.parseFromString(html, "text/html");
         var postContent = doc.getElementById("toBe");
         modalContent.insertAdjacentHTML("beforeend", postContent.innerHTML);
-        modal.style.visibility = "visible";
-        modal.classList.remove("hide-modal");
-        modal.classList.add("show-modal");
+        modal.classList.toggle("show-modal");
+        modalContentContainer.classList.toggle("show-modal");
       })
         .catch(error => console.log(error));  // log any errors that occur
     }
   }
-  // When the user clicks on closeButton (x), close the modal
-  closeButton.onclick = clickHide;
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
+  function windowOnClick(event) {
     if (event.target === modal) {
-      hideModal();
+        toggleModal();
     }
-  }
-  window.onpopstate = function(event) {
-    if (event.state && event.state.modalOpen) {
-      hideModal();
-    }
-  };
+}
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
 });
