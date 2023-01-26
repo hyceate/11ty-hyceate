@@ -203,6 +203,7 @@ a[data-current="current item"] {
   margin-bottom: 10px;
 }
 #page h3{
+  text-align:left;
   margin:0;
   margin-top:25px;
 }
