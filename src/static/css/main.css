@@ -63,6 +63,7 @@ body {
   align-items: center;
   background-color: var(--background-color);
   font-family: "Lexend", "Rubik", "Helvetica", sans-serif;
+  font-size:clamp(.7rem, 2vw, 1.5rem);
 }
 .body {
   flex: 1 0 auto;
@@ -151,7 +152,6 @@ body {
 .social-links {
   padding-inline: 1rem;
   display: inline-flex;
-  font-size: 1rem;
   font-weight: 600;
   list-style: none;
 }
@@ -160,7 +160,7 @@ body {
   padding: 0;
 }
 .navbar a {
-  font-size: 1.1rem;
+  font-size:clamp(1rem, 2vw, 2rem);
   padding: 5px 15px;
   text-decoration: none;
   text-transform: uppercase;
@@ -194,10 +194,10 @@ a[data-current="current item"] {
   margin: 0 auto;
   padding:0 15%;
 }
-#page p, #page ul, #page h3 {
+#page p, #page ul {
   line-height: 1.6;
   text-align: left;
-  font-size: clamp(.7rem, 2vw, 1rem); 
+  font-size: clamp(.7rem, 2vw, 1.5rem); 
 }
 #page ul ul{
   margin-bottom: 10px;
