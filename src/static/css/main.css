@@ -10,6 +10,7 @@
   box-sizing: border-box;
 }
 html, body {
+  font-size: 62.5%;
   height:100%;
   margin:0;
   overflow-x: hidden;
