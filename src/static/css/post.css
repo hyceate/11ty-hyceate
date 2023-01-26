@@ -66,7 +66,6 @@ img.post-thumbnails {
   margin-top:.56rem;
   flex: 1 1 300px;
   border-radius: 4px;
-  background: #f3eded;
   overflow-y: scroll;
   display: flex;
   align-items: center;
@@ -191,21 +190,6 @@ p.vtube-desc{
   box-shadow:  5px 5px 10px #bebebe,
               -5px -5px 10px #ffffff;
 }
-/* @media screen and (max-width:160em){
-  #toBe #post-content .post-right{
-    max-height:fit-content;
-  }
-}
-@media screen and (max-width:120em){
-  #toBe #post-content .post-right{
-    max-height: fit-content;
-  }
-}
-@media screen and (max-width:90em){
-  #post-content > .post-right{
-    max-height:45rem;
-  }
-} */
 @media screen and (max-width:64em){
   #toBe{
     padding-inline: .4em;
