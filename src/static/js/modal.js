@@ -10,10 +10,14 @@ document.addEventListener("DOMContentLoaded",function(){
     modal.classList.toggle("show-modal");
     modalContentContainer.classList.remove("show-modal");
     var content = modal.querySelector(".inserted");
-    if(!modal.classList.contains("show-modal")) {
-      content.innerHTML="";
-   }
+        if(!modal.classList.contains("show-modal")) {
+        modal.classList.add("remove-content");
+        setTimeout(function() {
+            content.innerHTML="";
+            modal.classList.remove("remove-content");
+        }, 500);
   }
+}
   // When the user clicks on a modal link, fetch the page's HTML content and show it in the modal
   for (var i = 0; i < modalLinks.length; i++) {
     modalLinks[i].onclick = function(event) {
