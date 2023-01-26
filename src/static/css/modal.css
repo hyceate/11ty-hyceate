@@ -1,23 +1,25 @@
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
   justify-content: center;
   align-items: center;
   position: fixed; /* Stay in place */
   z-index: 2; /* Sit on top */
+  display:flex;
   top: 0;
   left: 0;
   overflow: auto; /* Enable scroll if needed */
   width: 100%; /* Full width */
   min-height: 100%; /* Full height */
+  transform: scale(1);
   padding-top: -var(--header-height); /* Location of the box */
   background-color: rgba(179, 173, 173, 0.637);
   -webkit-backdrop-filter: blur(1px);  
   backdrop-filter: blur(1px);
+  visibility: hidden;
 }
 .modal.hide-modal {
   opacity: 0;
-  display:none;
+  visibility: hidden;
   transition: all 0.3s ease-out;
 }
 .modal.show-modal {
@@ -27,12 +29,13 @@
   opacity: 1;
   margin: 0px auto;
   transition: all 0.3s ease-in;
+  visibility: visibility;
 }
 /* Modal Content */
 .modal-content {
   overflow-y: auto;
   width: 80%;
-  max-height: 85vh;
+  max-height: fit-content;
   height:100%;
   margin: 0px auto;
   padding: 20px;

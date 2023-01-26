@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Rubik&family=Lexend&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora+Pro&family=Rubik&family=Lexend&display=swap");
 :root {
   --background-color: #f3edeb;
   --logo-color: #c58b8b;
@@ -14,8 +14,6 @@ html, body {
   margin:0;
   overflow-x: hidden;
   font-display:swap;
-  font-smooth: antialiased;
-  -webkit-font-smoothing: antialiased;
 }
 a {
   color: #460e18;
@@ -73,7 +71,6 @@ body {
   align-items: center;
   background-color: var(--background-color);
   text-align: center;
-  font-family: "Lexend", "Rubik", "Helvetica", sans-serif;
 }
 .landing {
   max-height: 80vh;
@@ -84,7 +81,7 @@ body {
   justify-content: center;
 }
 .landing-title{
-  font-family: "Be Vietnam", sans-serif;
+  font-family: "Sora", sans-serif;
   z-index:3;
 }
 .landing-title h1, .landing-title h2{
@@ -105,7 +102,7 @@ body {
   font-size:1.5rem;
   letter-spacing: .12rem;
   cursor:default;
-  font-weight: light;
+  font-weight: 500;
 }
 .hero-image{
   max-width: 100%;

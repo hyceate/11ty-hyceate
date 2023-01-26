@@ -5,8 +5,11 @@ backend:
   base_url: https://hyceate.pages.dev/
   auth_endpoint: /api/auth
   display_url: https://hyceate.pages.dev/
-media_folder: "assets/img"
-public_folder: "/img"
+  media_library:
+    name: cloudinary
+    config:
+      cloud_name: hyceate
+      api_key: 481173585921334
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true

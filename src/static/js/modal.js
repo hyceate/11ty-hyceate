@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",function(){
     var content = modal.querySelector(".inserted");
     modal.addEventListener("transitionend", function() {
       if(event.target.classList.contains("hide-modal")){
-      modal.style.display = "none";
+      modal.style.visibility = "hidden";
       content.innerHTML="";
       }
     });
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",function(){
     var content = modal.querySelector(".inserted");
     modal.addEventListener("transitionend", function() {
       if(event.target.classList.contains("hide-modal")){
-      modal.style.display = "none";
+        modal.style.visibility = "hidden";
       content.innerHTML="";
       }
     });
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",function(){
         var doc = parser.parseFromString(html, "text/html");
         var postContent = doc.getElementById("toBe");
         modalContent.insertAdjacentHTML("beforeend", postContent.innerHTML);
-        modal.style.display = "flex";
+        modal.style.visibility = "visible";
         modal.classList.remove("hide-modal");
         modal.classList.add("show-modal");
       })
