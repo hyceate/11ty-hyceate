@@ -30,4 +30,7 @@ eleventyComputed:
     <section class="inserted"></section>
   </div>
 </div>
-
+{% set js %}{% include "src/static/js/modal.js" %}{% endset %}
+    <script>
+      {{ js | jsmin | safe }}
+    </script>

@@ -6,15 +6,14 @@ eleventyComputed:
   slug: "{{slug}}"
 eleventyNavigation:
   key: Contact Me
-  order: 5
+  order: 9
 ---
 {% metagen metadata %}
 {% block content %}
 <section id="page">
     <h1>{{ title | safe }}</h1>
     {{ content | safe }}
-</section>
-<form id="contact"
+    <form id="contact"
   action="https://docs.google.com/forms/d/e/1FAIpQLSe041kNaiiKghNRWl1fY-l4Od3RFemdjmPf0UQE8uBlzz5u0Q/formResponse"
   method="POST"
   enctype="multipart/form-data"
@@ -25,7 +24,6 @@ eleventyNavigation:
   </label>
   <input id="name" name="entry.2063991218" type="text" aria-label="Name" required="true">
 </fieldset>
-
 <fieldset>
   <label for="email">
     Your email
@@ -44,4 +42,5 @@ eleventyNavigation:
 </fieldset>
 <button class="transition" type="submit" value="Submit">Submit</button>
 </form>
+</section>
 {% endblock %}

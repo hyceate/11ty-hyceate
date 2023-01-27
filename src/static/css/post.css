@@ -86,7 +86,7 @@ img.post-thumbnails {
   color:white;
   padding-inline:20px;
   padding-block: 7px;
-  width: 97.8%;
+  width: 99%;
   margin: auto;
   font-size: clamp(.7rem, 2.5vw, 3rem); 
   font-weight:bold;
