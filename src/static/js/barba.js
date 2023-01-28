@@ -88,6 +88,7 @@ function contentAnimation(container) {
 
 barba.init({
     transitions: [{
+      preventRunning: true,
       name: 'opacity-transition',
         async leave(data) {
         // code to update the menu

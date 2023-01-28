@@ -1,7 +1,7 @@
 ---
 title: Terms and Conditions
 date: 2023-01-11T02:26:12.193Z
-description: Terms and Conditions
+description: Terms and Conditions for commissioning Hyceate for projects
 layout: page
 eleventyNavigation:
   key: Terms
