@@ -24,6 +24,8 @@
 .gallerylist li:hover{
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
+  transform: scale(1.1);
+  margin-inline: 1em;
   box-shadow:1px 1px 15px rgb(199, 147, 147), 1px 1px 15px rgb(255, 233, 233);
 }
 .post-thumbnails {

@@ -30,7 +30,7 @@
   opacity:0;
   visibility: hidden;
   background: linear-gradient(145deg, #f8f7f3, #ebe3e3);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s ease-in 0.3s, opacity 0.3s 0s, transform 0.5s;
 }
 button.closeButton {
   position: absolute;
@@ -65,7 +65,7 @@ button.closeButton {
   opacity: 1;
   visibility: visible;
   transform: scale(1.0);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.4s 0s, transform 0.3s;
 }
 @media screen and (max-width:1024px) {
   .modal-content{

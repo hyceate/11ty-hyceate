@@ -58,11 +58,14 @@ module.exports = function(eleventyConfig) {
 		return `<div class="video"><div class="aspect-ratio" style="--aspect-ratio: ${aspectRatio}"><iframe class="youtube-player" src="https://youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&modestbranding=1" alt="Youtube Video" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
 	  });
 	//Passthroughs
-	eleventyConfig.addPassthroughCopy("src/static");
+	eleventyConfig.addPassthroughCopy("src/static/css");
+	eleventyConfig.addPassthroughCopy("src/static/img");
+	eleventyConfig.addPassthroughCopy("src/static/js");
 	eleventyConfig.addPassthroughCopy("admin");
 	eleventyConfig.addPassthroughCopy("src/_redirects", "/");
 	eleventyConfig.addPassthroughCopy("src/robots.txt", "/");
 	eleventyConfig.addPassthroughCopy("src/_headers.txt", "/");
+	eleventyConfig.setDataDeepMerge(true)
 	// Let Eleventy transform HTML files 
 	// So that we can use .html
 	return {

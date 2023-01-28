@@ -19,7 +19,6 @@ eleventyComputed:
     <title>{{ title }}</title>
     {% metagen title=title or metadata.title, desc=desc or metadata.desc,
     url=url + page.url %}
-    <script src="/static/js/font-awesome-kit.js" crossorigin="anonymous"></script>
 {#     <link rel="stylesheet" href="/static/css/grid.css" />
     <link rel="stylesheet" href="/static/css/main.css" />
     <link rel="stylesheet" href="/static/css/modal.css" />
@@ -49,9 +48,10 @@ eleventyComputed:
     <site-footer></site-footer>
     {%endrenderTemplate%}
   </body>
-  {% set js %} {% include "src/static/js/barba.js" %} {% endset %}
+  <script src="/static/js/font-awesome-kit.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  {% set js %} {% include "src/static/js/barba.js" %} {% endset %}
     <script>
       {{ js | jsmin | safe }}
     </script>
