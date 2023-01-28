@@ -5,11 +5,13 @@ backend:
   base_url: https://hyceate.pages.dev/
   auth_endpoint: /api/auth
   display_url: https://hyceate.pages.dev/
-  media_library:
-    name: cloudinary
-    config:
-      cloud_name: hyceate
-      api_key: 481173585921334
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: "hyceate"
+#     api_key: 481173585921334 
+media_folder: "src/static/img"
+
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -61,7 +63,6 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
@@ -83,8 +84,8 @@ collections:
         file: "src/index.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "base" }
-          - { label: "Tag", name: "tag", widget: "hidden", default: "page" }
           - { label: "Title", name: "title", widget: string }
+          - { label: "Image", name: "hero_image", widget: "image", media_folder: "static/img" }
           - { label: "Description", name: "description", widget: markdown, required: false }
           - { label: "Body", name: "body", widget: "markdown", required: false}
 

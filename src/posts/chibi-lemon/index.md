@@ -1,7 +1,8 @@
 ---
 thumbnail: icon.png
 title: Chibi Lemon
-description: Chibified Lemon, she is my original character. Yes her name is Lemon. She is not a lemon human-fied.
+description: Chibified Lemon, she is my original character. Yes her name is
+  Lemon. She is not a lemon human-fied.
 vtubername: Hyceate
 rigger: Hyceate
 rtwitter: hyceate

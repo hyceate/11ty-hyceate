@@ -4,6 +4,7 @@ eleventyComputed:
   title: "{{ title | safe }}"
   subtitle: "{{ subtitle | safe }}"
   description: "{{ description | safe }}"
+  hero_image: "{{ hero_image }}"
 ---
 {% metagen metadata %}
 {% block content %}
@@ -13,7 +14,7 @@ eleventyComputed:
   <h2>{{ subtitle }}</h2>
   </section>
   <div class="hero-image">
-    <img src="/static/img/gif_09.jpg" alt="Hero image banner" loading="lazy">
+    <img src="{{ hero_image }}" alt="Hero image banner" loading="lazy">
     <div class="hero-overlay"></div>
     </div>
   </section>

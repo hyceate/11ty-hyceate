@@ -1,7 +1,0 @@
-items:
-  - text: Home
-    url: /
-    tag: page
-  - text: Menu Two
-    url: "#"
-    tag: page

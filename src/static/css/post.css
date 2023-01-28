@@ -93,8 +93,10 @@ img.post-thumbnails {
   letter-spacing: 1px;
   border-radius: 4px;
   background-color:#b87a74;
-  box-shadow:  2px 2px 10px #705754,
-               -3px -3px 10px #ffffff;
+  box-shadow:
+  0px 3.6px 20.3px rgba(0, 0, 0, 0.028),
+  0px 15px 80px rgba(0, 0, 0, 0.09)
+;
 }
 .post-right p:not(.vtube-desc) {
   margin-left:10px;
@@ -137,8 +139,8 @@ p.vtube-desc{
   vertical-align: top;
   border-radius: 6px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow:  3px 3px 11px #bebebe,
-              -3px -3px 11px #ffffff;
+  box-shadow:      0px 3.6px 20.3px rgba(0, 0, 0, 0.028),
+  0px 15px 80px rgba(0, 0, 0, 0.09)
 }
 .aspect-ratio,
 .eleventy-plugin-youtube-embed {
@@ -180,15 +182,15 @@ p.vtube-desc{
   margin-right:5px;
   border-radius: 4px;
   background: #f3edeb;
-  box-shadow:  5px 5px 10px #d1ccca,
-               -2px -2px 10px #ffffff;
+  box-shadow:  2px 5px 10px #d1ccca,
+               -1px -1px 10px #ffffff;
 }
 .social-links .svg-inline--fa:hover{
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 4px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow:  5px 5px 10px #bebebe,
-              -5px -5px 10px #ffffff;
+  box-shadow:  2px 5px 10px #bebebe,
+              -1px -1px 10px #ffffff;
 }
 @media screen and (max-width:64em){
   #toBe{

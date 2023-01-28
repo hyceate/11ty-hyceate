@@ -18,12 +18,12 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(pluginWebc, {components: "src/_components/**/*.webc",});
 	eleventyConfig.addPlugin(embedYouTube, {modestBranding: true});
+	eleventyConfig.addPlugin(metagen);
 	eleventyConfig.addPlugin(sitemap, {
 		sitemap: {
 		  hostname: "https://hyceate.pages.dev",
 		},
 	  });
-	eleventyConfig.addPlugin(metagen);
 	eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
 		// Eleventy 1.0+: use this.inputPath and this.outputPath instead
 		if (outputPath.endsWith(".html")) {
