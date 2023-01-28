@@ -88,7 +88,7 @@ img.post-thumbnails {
   padding-block: 7px;
   width: 99%;
   margin: auto;
-  font-size: clamp(.7rem, 2.5vw, 3rem); 
+  font-size: clamp(.9rem, 2.5vw, 3rem); 
   font-weight:bold;
   letter-spacing: 1px;
   border-radius: 4px;
