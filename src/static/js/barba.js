@@ -50,22 +50,22 @@ function modal() {
 }
 //BARBA
 const loadingScreen = document.querySelector('.loading-screen')
-const mainNavigation = document.querySelector('.nav-link')
+const mainNavigation = document.querySelector('#header')
 // Function to add and remove the page transition screen
 function pageTransitionIn() {
     // loading screen to 1 opacity
   return gsap
     // .timeline()
-    .to(loadingScreen, { duration: .3, opacity: 1})
+    .to(loadingScreen, { duration: .25, opacity: 1})
 }
 // Function to add and remove the page transition screen
 function pageTransitionOut(container) {
   // GSAP methods can be chained and return directly a promise
   return gsap
-    .timeline({ delay: .3 }) // More readable to put it here
+    .timeline({ delay: .2 }) // More readable to put it here
     .add('start') // Use a label to sync screen and content animation
     .to(loadingScreen, {
-      duration: 0.3,
+      duration: 0.25,
       opacity: 0,
       ease: 'power1.out'
     }, 'start')
@@ -79,11 +79,11 @@ function contentAnimation(container) {
   return gsap
     .timeline()
     .from(container.querySelector('.is-animated'), {
-      duration: 0.3,
+      duration: 0.25,
       opacity: 1,
       stagger: 0.4
     })
-    .from(mainNavigation, { duration: .3, opacity: 1})
+    .from(mainNavigation, { duration: .2, opacity: 1})
 }
 
 barba.init({
