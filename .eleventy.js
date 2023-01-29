@@ -7,7 +7,6 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const metagen = require('eleventy-plugin-metagen');
-const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
@@ -46,8 +45,6 @@ module.exports = function(eleventyConfig) {
 	}
 	return minified.code;
 	});
-	const cacheBusterOptions = {};
-    eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
 	//Shortcodes
 	eleventyConfig.addNunjucksShortcode("youtube", function (youtubeUrl, aspectRatio) {
 		function getVideoId(id) {
