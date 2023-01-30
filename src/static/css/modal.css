@@ -33,11 +33,10 @@
 }
 /* The Close Button */
 .closeButton {
-  position: relative;
+  position: absolute;
   z-index: 3;
-  left: 97%;
+  right: 1%;
   padding: 0px;
-  margin-bottom:10px;
   border: 0;
   font-size:3rem;
   color: #e7a9a7;
