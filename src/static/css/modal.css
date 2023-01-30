@@ -40,13 +40,15 @@
   border: 0;
   font-size:3rem;
   color: #e7a9a7;
-  width:35px;
-  height:35px;
+  width:1em;
+  height:1em;
   border-radius: 5px;
   background: linear-gradient(145deg, #fffefb, #dbd5d4);
   box-shadow: 2px 2px 5px #b4aaa6, -1px -1px 5px #fdf6f4
 }
-
+div.closeButton svg.svg-inline--fa.fa-xmark{
+  vertical-align: baseline;
+}
 .closeButton:hover,
 .closeButton:focus {
   cursor: pointer;
