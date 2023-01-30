@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",function(){
   var modal = document.getElementById("myModal");
   var modalContentContainer = document.querySelector(".modal-content");
   var modalLinks = document.getElementsByClassName("modal-link");
-  var closeButton = document.querySelector("button.closeButton");
+  var closeButton = document.querySelector(".closeButton");
 
   function toggleModal() {
     // remove the content from the section element

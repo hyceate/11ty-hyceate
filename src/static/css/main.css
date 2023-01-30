@@ -235,7 +235,7 @@ a[data-current="current item"] {
 #page p, #page ul {
   line-height: 1.6;
   text-align: left;
-  font-size: clamp(.7rem, 2vw, 1.5rem); 
+  font-size: clamp(.9rem, 2vw, 1.5rem); 
 }
 #page ul ul{
   margin-bottom: 10px;
