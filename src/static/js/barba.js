@@ -16,7 +16,7 @@ function modal() {
                 setTimeout(function () {
                     content.innerHTML = "";
                     modal.classList.remove("remove-content");
-                }, 250);
+                }, 200);
             }
         }
         // When the user clicks on a modal link, fetch the page's HTML content and show it in the modal
