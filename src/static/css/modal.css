@@ -35,10 +35,11 @@
 .closeButton {
   position: absolute;
   z-index: 3;
-  right: 1%;
+  right: 1rem;
+  top:2%;
   padding: 0px;
   border: 0;
-  font-size:3rem;
+  font-size: clamp(3.5rem, 10vw, 4rem);
   color: #e7a9a7;
   width:1em;
   height:1em;
@@ -69,7 +70,7 @@ div.closeButton svg.svg-inline--fa.fa-xmark{
   .modal-content{
     max-height:95vh;
   }
-  button.closeButton{
-    margin: -10px 0px;
+  .closeButton{
+
   }
 }

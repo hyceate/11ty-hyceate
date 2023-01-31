@@ -14,7 +14,8 @@ eleventyComputed:
   <h2>{{ subtitle }}</h2>
   </section>
   <div class="hero-image">
-    <img src="{{ hero_image }}" alt="Hero image banner" width="2560" height="auto">
+    {%image "src/" + hero_image, " ", "Hero image banner", "(min-width: 30em) 50vw, 100vw" %}
+    {# <img src="{{ hero_image }}" alt="Hero image banner" width="2560" height="auto"> #}
     <div class="hero-overlay"></div>
     </div>
   </section>

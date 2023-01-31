@@ -173,15 +173,16 @@ body {
   left:0;
   filter: blur(2px);
 }
-#logo {
+.logo {
   display: flex;
   align-self: flex-start;
   width: 50px;
+  height:50px;
   transition: 0.3s ease-out;
   border-radius: 50px;
   color: var(--logo-color, #c58b8b);
 }
-#logo:hover {
+.logo:hover {
   -webkit-filter: contrast(200%);
   filter: contrast(200%);
   transition: 0.3s ease-out;
@@ -257,7 +258,6 @@ a[data-current="current item"] {
     font-size: calc(2rem + 0.390625vw);
   }
 }
-
 @media screen and (max-width:900px) {
   .landing h1{
     font-size: calc(10rem + 0.390625vw);

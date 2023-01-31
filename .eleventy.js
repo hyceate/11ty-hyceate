@@ -8,6 +8,32 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const metagen = require('eleventy-plugin-metagen');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
+
+async function imageShortcode(src, imgClass, alt, sizes) {
+	const inputP = path.dirname(src);
+	const relativeinputP = inputP.replace("src/", "");
+	const outputP = path.join("_site/", relativeinputP);
+
+	let metadata = await Image(src, {
+	  widths: [300, 600],
+	  formats: ["avif", "jpeg"],
+	  urlPath: "/" + relativeinputP,
+	  outputDir: outputP
+	});
+  
+	let imageAttributes = {
+	  alt,
+	  sizes,
+	  class: imgClass,
+	  loading: "lazy",
+	  decoding: "async",
+	};
+  
+	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+	return Image.generateHTML(metadata, imageAttributes);
+  }
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
@@ -54,6 +80,11 @@ module.exports = function(eleventyConfig) {
 		const videoId = getVideoId(youtubeUrl);
 		return `<div class="video"><div class="aspect-ratio" style="--aspect-ratio: ${aspectRatio}"><iframe class="youtube-player" src="https://youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&modestbranding=1" alt="Youtube Video" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`;
 	  });
+	  eleventyConfig.addAsyncShortcode("image", imageShortcode);
+	  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+	  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+	// watch targets
+	eleventyConfig.addWatchTarget("src/static/js/");
 	//Passthroughs
 	eleventyConfig.addPassthroughCopy("src/static/css");
 	eleventyConfig.addPassthroughCopy("src/static/img");

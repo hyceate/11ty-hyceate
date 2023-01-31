@@ -11,11 +11,12 @@ eleventyComputed:
   {% for post in collections.posts %}
   <li>
     <a class="modal-link" href="{{ post.url }}">
-      <img
+      {% image "./src/" + post.url + post.data.thumbnail, "post-thumbnails", post.data.title, "(min-width: 30em) 50vw, 100vw" %}
+{#       <img
         class="post-thumbnails"
         src="{{post.url}}{{post.data.thumbnail | url | safe}}"
         alt="{{post.title}}" loading="lazy"
-      />
+      /> #}
     </a>
   </li>
   {% endfor %}

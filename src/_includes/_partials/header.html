@@ -1,3 +1,7 @@
 <header id="header" class="col-12">
-    <a href="/"><img id="logo" src="/static/img/logo.jpg" alt="Hyceate's Logo"></a>{% include "src/_includes/_partials/navbar.html" %}
+    <a href="/">
+        {%image "src/static/img/logo.jpg", "logo", "Hyceate's Logo", "min-width(2em)" %}
+        {# <img id="logo" src="/static/img/logo.jpg" alt="Hyceate's Logo"> #}
+    </a>
+        {% include "src/_includes/_partials/navbar.html" %}
 </header>
