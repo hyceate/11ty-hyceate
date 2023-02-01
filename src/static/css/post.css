@@ -91,15 +91,15 @@ img.post-thumbnails {
   padding-block: 7px;
   width: 99%;
   margin: auto;
-  font-size: clamp(.9rem, 2.5vw, 3rem); 
+  font-family: "Rubik","Lexend", sans-serif;
+  font-size: clamp(1em, 3vw, 4rem); 
   font-weight:bold;
   letter-spacing: 1px;
   border-radius: 4px;
   background-color:#b87a74;
   box-shadow:
   0px 3.6px 20.3px rgba(0, 0, 0, 0.028),
-  0px 15px 80px rgba(0, 0, 0, 0.09)
-;
+  0px 15px 80px rgba(0, 0, 0, 0.09);
 }
 .post-right p:not(.vtube-desc) {
   margin-left:10px;
@@ -127,7 +127,7 @@ p.vtube-desc{
   -5px -5px 10px #ffffff;
 }
 #artist p, #rigger p, .artist-title, .rigger-title{
-  font-size: clamp(.7rem, 2vw, 1.9rem); 
+  font-size: clamp(1rem, 3vw, 2rem); 
 }
 #artist,
 #rigger {
