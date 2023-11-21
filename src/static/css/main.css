@@ -231,7 +231,7 @@ a[data-current="current item"] {
 #page {
   width:100%;
   margin: 0 auto;
-  padding:0 10vw 2%;
+  padding:0 15vw 2%;
 }
 #page p, #page ul {
   line-height: 1.6;
